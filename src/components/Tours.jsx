@@ -63,7 +63,7 @@ import {
   
   const css = {
     name: {
-      color: "#604132",
+      color: "#f0cc89",
       fontSize: "22px",
       lineHeight: "28px",
       fontWeight: "500",
@@ -71,7 +71,7 @@ import {
       textTransform: "capitalize",
     },
     title: {
-      color: "#f0cc89",
+      color: "#2e1f0e",
       fontSize: {
         base: "32px",
         lg: "42px",
@@ -114,7 +114,7 @@ import {
       height: "260px",
     },
     button: {
-      backgroundColor: "#2e1f0e",
+      backgroundColor: "#604132",
       color: "#fff",
       height: "45px",
       width: "94%",

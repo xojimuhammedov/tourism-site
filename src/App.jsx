@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import Tours from './components/Tours'
 import GalleryPage from './pages/GalleryPage'
 import Services from './components/Services'
+import Footer from './components/Footer'
+import HotelPage from './pages/HotelPage'
 
 function App() {
 
@@ -20,7 +22,9 @@ function App() {
           <Tours />
         </>} />
         <Route path='/gallery' element={<GalleryPage />} />
+        <Route path='/hotels' element={<HotelPage />} />
       </Routes>
+      <Footer />
     </>
   )
 }

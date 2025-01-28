@@ -68,13 +68,13 @@ export default About;
 
 const css = {
     name: {
-        color: "#604132",
+        color: "#f0cc89",
         fontSize: "18px",
         lineHeight: "25px",
         fontWeight: "500",
     },
     title: {
-        color: "#f0cc89",
+        color: "#2e1f0e",
         fontSize: {
             base: "32px",
             md: "42px",
@@ -121,7 +121,7 @@ const css = {
         },
     },
     button: {
-        backgroundColor: "#2e1f0e",
+        backgroundColor: "#604132",
         color: "#fff",
         marginTop: "18px",
         height: "45px",
