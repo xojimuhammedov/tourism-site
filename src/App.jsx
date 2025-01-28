@@ -8,6 +8,7 @@ import GalleryPage from './pages/GalleryPage'
 import Services from './components/Services'
 import Footer from './components/Footer'
 import HotelPage from './pages/HotelPage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         </>} />
         <Route path='/gallery' element={<GalleryPage />} />
         <Route path='/hotels' element={<HotelPage />} />
+        <Route path='/contact' element={<ContactPage />} />
       </Routes>
       <Footer />
     </>

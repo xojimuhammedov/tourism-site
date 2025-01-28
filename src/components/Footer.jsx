@@ -115,6 +115,7 @@ const css = {
         lineHeight: "24px",
         marginBottom: "10px",
         fontWeight: "700",
+        textTransform: "uppercase"
     },
     link: {
         color: "#2e1f0e",
@@ -140,6 +141,6 @@ const css = {
         width: "220px",
         height: "130px",
         cursor: "pointer",
-        marginBottom:"18px"
+        marginBottom: "18px"
     },
 };
