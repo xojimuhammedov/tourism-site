@@ -113,7 +113,7 @@ const css = {
         width: "270px"
     },
     item: {
-        borderRadius: "8px",
+        borderRadius: "12px",
         boxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 16px 0px",
         background: "#fff",
         width: "450px",
@@ -130,7 +130,7 @@ const css = {
         fontWeight: "500",
         marginTop: "20px",
         transition: "0.3s",
-        borderRadius: "24px",
+        borderRadius: "12px",
 
         _hover: {
             backgroundColor: "#2e1f0e",

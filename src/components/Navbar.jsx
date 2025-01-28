@@ -16,7 +16,9 @@ const Navbar = () => {
                     <Flex gap={'36px'}>
                         <Link {...css.link} href='/'>Home</Link>
                         <Link {...css.link} href='/'>About Us</Link>
-                        <Link {...css.link} href='/'>Tours</Link>
+                        <Alink to='/tours'>
+                            <Text {...css.link}>Tours</Text>
+                        </Alink>
                         <Alink to='/hotels'>
                             <Text {...css.link}>Hotels</Text>
                         </Alink>

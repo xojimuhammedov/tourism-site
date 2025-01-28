@@ -9,6 +9,7 @@ import Services from './components/Services'
 import Footer from './components/Footer'
 import HotelPage from './pages/HotelPage'
 import ContactPage from './pages/ContactPage'
+import TourPage from './pages/TourPage'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path='/gallery' element={<GalleryPage />} />
         <Route path='/hotels' element={<HotelPage />} />
         <Route path='/contact' element={<ContactPage />} />
+        <Route path='/tours' element={<TourPage />} />
       </Routes>
       <Footer />
     </>

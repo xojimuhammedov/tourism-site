@@ -19,12 +19,12 @@ const HotelPage = () => {
                             {...css.image}
                         />
                         <Heading {...css.subname}>Art Institute of Chicago</Heading>
+                        <Text {...css.text}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, eveniet.</Text>
                         <Flex
                             {...css.flex}
                         >
                             <Image {...css.icon} src={LocationIcon} /> Tashkent, Uzbekistan
                         </Flex>
-                        <Text {...css.text}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, eveniet.</Text>
                         <hr />
                         <Flex align={'center'} justify={'space-between'}>
                             <Heading {...css.subname}>832$</Heading>
@@ -86,7 +86,8 @@ const css = {
         color: "#988c7b",
         padding: "0 15px",
         alignItems: "center",
-        gap: "6px"
+        gap: "6px",
+        margin: "10px 0"
     },
     image: {
         borderRadius: "8px 8px 0 0",
