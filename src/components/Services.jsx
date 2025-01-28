@@ -1,9 +1,9 @@
-import { Box, Flex, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
 function Services() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <Box id="service" {...css.about}>
             <Box className="container">

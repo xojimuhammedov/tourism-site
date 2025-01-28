@@ -46,7 +46,6 @@ import {
                     __html: item?.description?.slice(0, 95),
                   }}
                 />
-  
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
                   to={`/destination/${item?.id}`}>
