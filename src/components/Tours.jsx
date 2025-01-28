@@ -65,8 +65,8 @@ import {
   const css = {
     name: {
       color: "#604132",
-      fontSize: "18px",
-      lineHeight: "25px",
+      fontSize: "22px",
+      lineHeight: "28px",
       fontWeight: "500",
       textAlign: "center",
       textTransform: "capitalize",
