@@ -28,7 +28,7 @@ function About() {
                             custom-tailored itinerary that not only fulfills but far exceeds
                             your wildest dreams and expectations.
                         </Text>
-                        <Link href="tel:+998335898888" target="_blank" {...css.button}>
+                        <Link href="tel:+998977472806" target="_blank" {...css.button}>
                             Contact with you
                         </Link>
                     </Box>
@@ -36,25 +36,25 @@ function About() {
                         <Image
                             borderTopLeftRadius="50px"
                             {...css.image}
-                            src={'https://www.travel4you.uz/assets/blog-1-Bu0LaC9c.avif'}
+                            src={'http://www.universal-tours.ru/wp-content/uploads/2018/01/5-Medrese-SHer-Dor-na-ploshhadi-Registan.jpg'}
                             alt="AboutImageOne"
                         />
                         <Image
                             borderTopRightRadius="50px"
                             {...css.image}
-                            src={'https://www.travel4you.uz/assets/blog-1-Bu0LaC9c.avif'}
+                            src={'https://static.tildacdn.com/tild3635-6534-4563-b934-636465633166/634579f7-979b-4f63-8.jpg'}
                             alt="AboutImageOne"
                         />
                         <Image
                             borderBottomLeftRadius="50px"
                             {...css.image}
-                            src={'https://www.travel4you.uz/assets/blog-1-Bu0LaC9c.avif'}
+                            src={'https://i.incamp.ru/u/6/877/summer-innovation-camp-armeniy-12956-964-pic-1200x630.jpg'}
                             alt="AboutImageOne"
                         />
                         <Image
                             borderBottomRightRadius="50px"
                             {...css.image}
-                            src={'https://www.travel4you.uz/assets/blog-1-Bu0LaC9c.avif'}
+                            src={'https://img.pac.ru/resorts/213093/422456/big/BA50999F7F0001015388D5174B197A6A.jpg'}
                             alt="AboutImageOne"
                         />
                     </SimpleGrid>

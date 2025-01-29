@@ -4,6 +4,7 @@ import React from 'react';
 import { Link as Alink } from 'react-router-dom'
 
 import LogoIcon from '../assets/logo.jpg'
+import Language from './Language';
 
 const Navbar = () => {
     return (
@@ -13,7 +14,7 @@ const Navbar = () => {
                     <Alink to={'/'}>
                         <Image {...css.image} src={LogoIcon} />
                     </Alink>
-                    <Flex gap={'36px'}>
+                    <Flex align={'center'} gap={'36px'}>
                         <Link {...css.link} href='/'>Home</Link>
                         <Link {...css.link} href='/'>About Us</Link>
                         <Alink to='/tours'>
@@ -25,6 +26,7 @@ const Navbar = () => {
                         <Alink to='/contact'>
                             <Text {...css.link}>Contact Us</Text>
                         </Alink>
+                        <Language />
                     </Flex>
                 </Flex>
             </Box>
@@ -49,6 +51,11 @@ const css = {
         display: {
             base: "none",
             lg: "block"
+        },
+        transition: "0.3s",
+
+        _hover: {
+            color: "#604132"
         }
     }
 }

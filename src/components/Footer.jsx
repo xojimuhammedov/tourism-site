@@ -11,7 +11,6 @@ import { useTranslation } from "react-i18next";
 import { Link as Alink } from "react-router-dom";
 import Telegram from "../assets/Telegram";
 import Instagram from "../assets/Instagram";
-//   import WhatsappIcon from "../assets/whatsapp.png";
 
 import LogoIcon from '../assets/logo.png'
 
@@ -58,8 +57,8 @@ function Footer() {
                     </Flex>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("Contact")}</Heading>
-                        <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
-                            +7 775 337 85 95
+                        <Link {...css.link} target="_blank" href={"tel:+998977472806"}>
+                            +998 97 747 28 06
                         </Link>
                         <Link
                             {...css.link}

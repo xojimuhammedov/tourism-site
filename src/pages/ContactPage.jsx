@@ -8,7 +8,7 @@ const ContactPage = () => {
                 <Flex justifyContent={'space-between'} align={'center'} gap={'36px'}>
                     <Box>
                         <Heading {...css.title}>Contact Us</Heading>
-                        <Text {...css.text}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident animi ut pariatur aut odio ratione.</Text>
+                        <Text {...css.text}>Have questions or need assistance? Feel free to reach out to us. We’re here to help with any inquiries. </Text>
                         <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
                             +7 775 337 85 95
                         </Link>
@@ -21,15 +21,15 @@ const ContactPage = () => {
                         <SimpleGrid gap={'36px'} mt={'60px'} columns={2}>
                             <Flex gap={'8px'} flexDirection={'column'}>
                                 <Heading {...css.name}>Customer Support</Heading>
-                                <Text {...css.texts}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis est corporis consequuntur debitis nihil?</Text>
+                                <Text {...css.texts}>Contact us for quick and efficient solutions to your issues.</Text>
                             </Flex>
                             <Flex gap={'8px'} flexDirection={'column'}>
                                 <Heading {...css.name}>Feedback and Suggestions</Heading>
-                                <Text {...css.texts}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis est corporis consequuntur debitis nihil?</Text>
+                                <Text {...css.texts}>We appreciate your feedback and suggestions to improve our services.</Text>
                             </Flex>
                             <Flex gap={'8px'} flexDirection={'column'}>
                                 <Heading {...css.name}>Media Inquiries</Heading>
-                                <Text {...css.texts}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis est corporis consequuntur debitis nihil?</Text>
+                                <Text {...css.texts}>Reach out for press inquiries, collaborations, and interviews.</Text>
                             </Flex>
                         </SimpleGrid>
                     </Box>
@@ -99,7 +99,7 @@ const css = {
         fontSize: "16px",
         lineHeight: "24px",
         marginBottom: "10px",
-        width: "390px"
+        width: "410px"
     },
     name: {
         fontSize: "18px",
