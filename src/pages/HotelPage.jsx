@@ -1,6 +1,5 @@
-import { Box, Button, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import LocationIcon from '../assets/pin.png'
 import { useTranslation } from 'react-i18next';

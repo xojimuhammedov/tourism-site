@@ -10,6 +10,8 @@ import Footer from './components/Footer'
 import HotelPage from './pages/HotelPage'
 import ContactPage from './pages/ContactPage'
 import TourPage from './pages/TourPage'
+import TourAboutPage from './pages/TourAboutPage'
+import HotelAboutPage from './pages/HotelAboutPage'
 
 function App() {
 
@@ -25,8 +27,10 @@ function App() {
         </>} />
         <Route path='/gallery' element={<GalleryPage />} />
         <Route path='/hotels' element={<HotelPage />} />
+        <Route path='/hotels/about' element={<HotelAboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/tours' element={<TourPage />} />
+        <Route path='/tours/about' element={<TourAboutPage />} />
       </Routes>
       <Footer />
     </>
