@@ -3,13 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import LocationIcon from '../assets/pin.png'
+import { useTranslation } from 'react-i18next';
 
 const HotelPage = () => {
+    const { t } = useTranslation()
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
-                <Heading {...css.name}>The perfect hotels</Heading>
-                <Heading {...css.title}>Hotels in Uzbekistan & Central Asia</Heading>
+                <Heading {...css.name}>{t("The perfect hotels")}</Heading>
+                <Heading {...css.title}>{t("Hotels in Uzbekistan & Central Asia")}</Heading>
                 <SimpleGrid mt={"48px"}
                     gap={"24px"}
                     columns={{ base: 1, sm: 2, lg: 3 }}>

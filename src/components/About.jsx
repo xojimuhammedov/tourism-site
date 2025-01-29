@@ -8,28 +8,24 @@ import {
     Text,
 } from "@chakra-ui/react";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 function About() {
+    const { t } = useTranslation()
     return (
         <Box id="about" p={"36px 0"}>
             <Box className="container">
                 <Flex {...css.list}>
                     <Box>
-                        <Heading {...css.name}>About us</Heading>
+                        <Heading {...css.name}>{t("About Us")}</Heading>
                         <Heading {...css.title}>
-                            We're the top adventure travel company
+                            {t("We're the top adventure travel company")}
                         </Heading>
                         <Text {...css.text}>
-                            Whether you're yearning for a romantic escape filled with
-                            enchanting moments, planning an exciting family-friendly adventure
-                            packed with cherished memories, or embarking on a thrilling solo
-                            journey to explore the world's wonders, a reputable travel agency
-                            possesses the expertise and resources to meticulously curate a
-                            custom-tailored itinerary that not only fulfills but far exceeds
-                            your wildest dreams and expectations.
+                            {t("about_text")}
                         </Text>
                         <Link href="tel:+998977472806" target="_blank" {...css.button}>
-                            Contact with you
+                            {t("Contact with you")}
                         </Link>
                     </Box>
                     <SimpleGrid mb={{ base: "18px", md: 0 }} gap={"18px"} columns={2}>
@@ -99,7 +95,7 @@ const css = {
             lg: "600px",
         },
         marginTop: "18px",
-        color:"#988c7b"
+        color: "#988c7b"
     },
     image: {
         width: {

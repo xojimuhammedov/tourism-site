@@ -50,43 +50,43 @@ function Services() {
             <Box className="container">
                 <Heading {...css.subname}>{t("Services")}</Heading>
                 <Heading {...css.title}>
-                    Our Services
+                    {t("Our Services")}
                 </Heading>
             </Box>
             <Slider {...settings}>
                 <Box>
                     <Image {...css.image} src={'https://media.baamboozle.com/uploads/images/166561/1619153331_166766.webp'} />
                     <Box {...css.bottom}>
-                        <Heading {...css.name}>Flights</Heading>
-                        <Text {...css.subtext}>Actual seasonal schedule of internal flights and international flights to the major cities of Uzbekistan from all over the world!</Text>
+                        <Heading {...css.name}>{t("Flights")}</Heading>
+                        <Text className="service-text" {...css.subtext}>{t("service_text1")}</Text>
                     </Box>
                 </Box>
                 <Box>
                     <Image {...css.image} src={'https://www.tourstouzbekistan.com/uploads/hotels-uzbekistan-anur-tour.jpg'} />
                     <Box {...css.bottom}>
-                        <Heading {...css.name}>Hotels</Heading>
-                        <Text {...css.subtext}>Enjoy a wonderful stay in boutique and business class hotels in Uzbekistan and well-trained attentive personnel.</Text>
+                        <Heading {...css.name}>{t("Hotels")}</Heading>
+                        <Text className="service-text" {...css.subtext}>{t("service_text2")}</Text>
                     </Box>
                 </Box>
                 <Box>
                     <Image {...css.image} src={'https://www.gid71.ru/eng/uslugi/Stewarts-Coaches-desktop.jpg'} />
                     <Box {...css.bottom}>
-                        <Heading {...css.name}>Transport</Heading>
-                        <Text {...css.subtext}>Transfers and excursions in comfortable touristic class cars, and punctual qualified drivers make journeys pleasant and carefree.</Text>
+                        <Heading {...css.name}>{t("Transport")}</Heading>
+                        <Text className="service-text" {...css.subtext}>{t("service_text3")}</Text>
                     </Box>
                 </Box>
                 <Box>
                     <Image {...css.image} src={'https://www.traveldailymedia.com/assets/2020/12/shutterstock_709307929.jpg'} />
                     <Box {...css.bottom}>
-                        <Heading {...css.name}>Guides</Heading>
-                        <Text {...css.subtext}>High-quality services of certified local and escorting guides – interpreters are included in the private and group tours.</Text>
+                        <Heading {...css.name}>{t("Guides")}</Heading>
+                        <Text className="service-text" {...css.subtext}>{t("service_text4")}</Text>
                     </Box>
                 </Box>
                 <Box>
                     <Image {...css.image} src={'https://alrf.ru/upload/resize_cache/iblock/9ec/1005_580_2/1645642470_44_sportishka_com_p_komandirovka_turizm_krasivo_foto_51.jpg'} />
                     <Box {...css.bottom}>
-                        <Heading {...css.name}>MICE</Heading>
-                        <Text {...css.subtext}>Special MICE packages and complete information about events and all kinds of MICE related services are presented for companies.</Text>
+                        <Heading {...css.name}>{t("MICE")}</Heading>
+                        <Text className="service-text" {...css.subtext}>{t("service_text5")}</Text>
                     </Box>
                 </Box>
             </Slider>
@@ -102,7 +102,7 @@ const css = {
             base: "36px 0",
             lg: "72px 0",
         },
-        paddingBottom:"0 !important"
+        paddingBottom: "0 !important"
     },
     subname: {
         color: "#f0cc89",
@@ -136,16 +136,16 @@ const css = {
     subtext: {
         bottom: "90px",
         left: "20px",
-        fontSize: "13px",
+        fontSize: "12px",
         lineHeight: "normal",
         fontWeight: "400",
         color: "#000",
     },
     image: {
         width: "95%",
-        borderRadius:"8px",
-        height:"320px",
-        objectFit:"cover"
+        borderRadius: "8px",
+        height: "320px",
+        objectFit: "cover"
     },
     bottom: {
         backgroundColor: "white",
@@ -155,6 +155,6 @@ const css = {
         left: "10px",
         padding: "8px 12px",
         opacity: "0.8",
-        borderRadius:"8px",
+        borderRadius: "8px",
     }
 };

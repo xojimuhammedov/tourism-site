@@ -1,14 +1,16 @@
 import { Box, Button, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
+    const { t } = useTranslation()
     return (
         <Box p={"48px 0"}>
             <Box className='container'>
                 <Flex justifyContent={'space-between'} align={'center'} gap={'36px'}>
                     <Box>
-                        <Heading {...css.title}>Contact Us</Heading>
-                        <Text {...css.text}>Have questions or need assistance? Feel free to reach out to us. We’re here to help with any inquiries. </Text>
+                        <Heading {...css.title}>{t("Contact Us")}</Heading>
+                        <Text {...css.text}>{t("Have questions or need assistance? Feel free to reach out to us. We’re here to help with any inquiries.")} </Text>
                         <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
                             +7 775 337 85 95
                         </Link>
@@ -20,28 +22,28 @@ const ContactPage = () => {
                         </Link>
                         <SimpleGrid gap={'36px'} mt={'60px'} columns={2}>
                             <Flex gap={'8px'} flexDirection={'column'}>
-                                <Heading {...css.name}>Customer Support</Heading>
-                                <Text {...css.texts}>Contact us for quick and efficient solutions to your issues.</Text>
+                                <Heading {...css.name}>{t("Customer Support")}</Heading>
+                                <Text {...css.texts}>{t("Contact us for quick and efficient solutions to your issues.")}</Text>
                             </Flex>
                             <Flex gap={'8px'} flexDirection={'column'}>
-                                <Heading {...css.name}>Feedback and Suggestions</Heading>
-                                <Text {...css.texts}>We appreciate your feedback and suggestions to improve our services.</Text>
+                                <Heading {...css.name}>{t("Feedback and Suggestions")}</Heading>
+                                <Text {...css.texts}>{t("We appreciate your feedback and suggestions to improve our services.")}</Text>
                             </Flex>
                             <Flex gap={'8px'} flexDirection={'column'}>
-                                <Heading {...css.name}>Media Inquiries</Heading>
-                                <Text {...css.texts}>Reach out for press inquiries, collaborations, and interviews.</Text>
+                                <Heading {...css.name}>{t("Media Inquiries")}</Heading>
+                                <Text {...css.texts}>{t("Reach out for press inquiries, collaborations, and interviews.")}</Text>
                             </Flex>
                         </SimpleGrid>
                     </Box>
                     <Box {...css.item}>
-                        <Heading {...css.title}>Get in Touch</Heading>
-                        <Text {...css.text}>You can reach us anytime</Text>
-                        <input type='name' placeholder='FirstName' className='form-input' />
-                        <input type='name' placeholder='LastName' className='form-input' />
-                        <input type='number' placeholder='Phone Number' className='form-input' />
-                        <input type='email' placeholder='Email' className='form-input' />
-                        <textarea placeholder='Message' className='form-input' />
-                        <Button type='submit' {...css.button}>Submit</Button>
+                        <Heading {...css.title}>{t("Get in Touch")}</Heading>
+                        <Text {...css.text}>{t("You can reach us anytime")}</Text>
+                        <input type='name' placeholder={t("FirstName")} className='form-input' />
+                        <input type='name' placeholder={t("LastName")} className='form-input' />
+                        <input type='number' placeholder={t("Phone Number")} className='form-input' />
+                        <input type='email' placeholder={t("Email")} className='form-input' />
+                        <textarea placeholder={t("Message")} className='form-input' />
+                        <Button type='submit' {...css.button}>{t("Submit")}</Button>
                     </Box>
                 </Flex>
 
@@ -51,11 +53,11 @@ const ContactPage = () => {
                         className='form-map'
                         allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     <Box>
-                        <Heading {...css.subname}>Our Location</Heading>
-                        <Heading {...css.title}>Connecting Near and Far</Heading>
-                        <Text mt={'24px'} {...css.name}>Headquarters</Text>
+                        <Heading {...css.subname}>{t("Our Location")}</Heading>
+                        <Heading {...css.title}>{t("Connecting Near and Far")}</Heading>
+                        <Text mt={'24px'} {...css.name}>{t("Headquarters")}</Text>
                         <Text mt={'12px'} {...css.texts}>
-                            Uzbekistan, Tashkent city, Shayhontohur district, Labzak street 10
+                            Uzbekistan, Tashkent city, Miraabad district
                         </Text>
                     </Box>
                 </Flex>

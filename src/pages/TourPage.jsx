@@ -2,13 +2,15 @@ import { Box, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import React from 'react';
 
 import LocationIcon from '../assets/pin.png'
+import { useTranslation } from 'react-i18next';
 
 const TourPage = () => {
+    const {t} = useTranslation()
     return (
         <Box p={'36px 0'}>
             <Box className='container'>
-                <Heading {...css.name}>The perfect tour</Heading>
-                <Heading {...css.title}>All Tours</Heading>
+                <Heading {...css.name}>{t("The perfect tour")}</Heading>
+                <Heading {...css.title}>{t("All Tours")}</Heading>
                 <Flex mt={'24px'} gap={'18px'} align={'center'}>
                     <Heading {...css.subname}>All Tours</Heading>
                     <Heading {...css.subname}>Tashkent</Heading>

@@ -1,4 +1,4 @@
-.form-input{
+.form-input {
     outline: none;
     padding: 10px 12px;
     width: 100%;
@@ -6,7 +6,16 @@
     border: 2px solid #f2f2f2;
     border-radius: 12px;
 }
-.form-map{
+
+.form-map {
     width: 550px;
     height: 550px;
+}
+
+.service-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient:vertical;
 }

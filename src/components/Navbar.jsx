@@ -5,8 +5,10 @@ import { Link as Alink } from 'react-router-dom'
 
 import LogoIcon from '../assets/logo.jpg'
 import Language from './Language';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
+    const {t} = useTranslation()
     return (
         <Box {...css.navbar}>
             <Box className='container'>
@@ -15,16 +17,16 @@ const Navbar = () => {
                         <Image {...css.image} src={LogoIcon} />
                     </Alink>
                     <Flex align={'center'} gap={'36px'}>
-                        <Link {...css.link} href='/'>Home</Link>
-                        <Link {...css.link} href='/'>About Us</Link>
+                        <Link {...css.link} href='/'>{t("Home")}</Link>
+                        <Link {...css.link} href='/'>{t("About Us")}</Link>
                         <Alink to='/tours'>
-                            <Text {...css.link}>Tours</Text>
+                            <Text {...css.link}>{t("Tours")}</Text>
                         </Alink>
                         <Alink to='/hotels'>
-                            <Text {...css.link}>Hotels</Text>
+                            <Text {...css.link}>{t("Hotels")}</Text>
                         </Alink>
                         <Alink to='/contact'>
-                            <Text {...css.link}>Contact Us</Text>
+                            <Text {...css.link}>{t("Contact Us")}</Text>
                         </Alink>
                         <Language />
                     </Flex>

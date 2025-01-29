@@ -28,10 +28,10 @@ function Footer() {
                         <Heading {...css.title}>{t("INFORMATION")}</Heading>
 
                         <Alink onClick={() => window.scrollTo(0, 0)} to={"/company"}>
-                            <Text {...css.link}>{t("About")}</Text>
+                            <Text {...css.link}>{t("About Us")}</Text>
                         </Alink>
                         <Alink onClick={() => window.scrollTo(0, 0)} to={"/vacancy"}>
-                            <Text {...css.link}>{t("Gallery")}</Text>
+                            <Text {...css.link}>{t("Hotels")}</Text>
                         </Alink>
                         <Alink onClick={() => window.scrollTo(0, 0)} to={"/contact"}>
                             <Text {...css.link}>{t("Tours")}</Text>
@@ -70,9 +70,7 @@ function Footer() {
                             target="_blank"
                             {...css.link}
                             href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
-                            {t(
-                                "Республика Казахстан, г.Алматы, Тулебаева 38, Бизнес центр Жетысу, офис 512"
-                            )}
+                            Uzbekistan, Tashkent city, Miraabad district
                         </Link>
                     </Flex>
                     <Flex flexDirection={"column"}>
