@@ -41,7 +41,7 @@ function Tours() {
                 src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
                 {...css.image}
               />
-              <Heading {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
+              <Heading className='tour-name' {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
               <Text
                 {...css.text}
                 className="service-text"

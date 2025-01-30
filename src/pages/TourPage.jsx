@@ -10,6 +10,9 @@ import { Link } from 'react-router-dom';
 const TourPage = () => {
     const { t, i18n } = useTranslation()
     const [tour, setTour] = useState([])
+    const [subtour, setSubtour] = useState([])
+    const [data, setData] = useState([])
+    const [tourId, setTourId] = useState(null)
 
     useEffect(() => {
         axios
@@ -18,14 +21,16 @@ const TourPage = () => {
             .catch((err) => console.log(err));
     }, []);
 
-    const [subtour, setSubtour] = useState([])
 
     useEffect(() => {
         axios
             .get(`${BASE_URL}/subtours/`)
-            .then((res) => setSubtour(res?.data?.data))
+            .then((res) => {
+                setSubtour(res?.data?.data)
+                setData(res?.data?.data?.filter((item) => item?.tours_id === tourId))
+            })
             .catch((err) => console.log(err));
-    }, []);
+    }, [tourId]);
 
     return (
         <Box p={'36px 0'}>
@@ -33,10 +38,10 @@ const TourPage = () => {
                 <Heading {...css.name}>{t("The perfect tour")}</Heading>
                 <Heading {...css.title}>{t("All Tours")}</Heading>
                 <Flex mt={'24px'} gap={'18px'} align={'center'}>
-                    <Heading {...css.subname}>All Tours</Heading>
+                    <Heading onClick={() => setTourId(null)} {...css.subname}>All Tours</Heading>
                     {
                         tour?.map((item, index) => (
-                            <Heading key={index} {...css.subname}> {item[`name_${i18n?.language}`]}</Heading>
+                            <Heading onClick={() => setTourId(item?.id)} key={index} {...css.subname}> {item[`name_${i18n?.language}`]}</Heading>
                         ))
                     }
                 </Flex>
@@ -44,49 +49,103 @@ const TourPage = () => {
                     gap={"24px"}
                     columns={{ base: 1, sm: 2, lg: 3 }}>
                     {
-                        subtour.map((item, index) => (
-                            <Box key={index} {...css.item}>
-                                <Image
-                                    src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
-                                    {...css.image}
-                                />
-                                <Heading {...css.subnames}>{item[`name_${i18n?.language}`]}</Heading>
-                                <Flex align={'center'} justify={'space-between'}>
-                                    <Flex
-                                        {...css.flex}
-                                    >
-                                        <Image {...css.icon} src={LocationIcon} /> Destination:
-                                    </Flex>
-                                    <Text {...css.flex}>Uzbekistan, Tashkent</Text>
-                                </Flex>
-                                <Flex align={'center'} justify={'space-between'}>
-                                    <Flex
-                                        {...css.flex}
-                                    >
-                                        <Image {...css.icon} src={LocationIcon} /> Dates:
-                                    </Flex>
-                                    <Text {...css.flex}>Avaible during the year</Text>
-                                </Flex>
-                                <Flex align={'center'} justify={'space-between'}>
-                                    <Flex
-                                        {...css.flex}
-                                    >
-                                        <Image {...css.icon} src={LocationIcon} /> Group size:
-                                    </Flex>
-                                    <Text {...css.flex}>Max 10 people</Text>
-                                </Flex>
-                                <hr />
-                                <Link
-                                    onClick={() => window.scrollTo(0, 0)}
-                                    to={`/tours/about/${item?.id}`}>
-                                    <Button {...css.button}>{t("Details")}</Button>
-                                </Link>
-                                {/* <Flex align={'center'} justify={'space-between'}>
+                        tourId ? (
+                            <>
+                                {
+                                    data?.map((item, index) => (
+                                        <Box key={index} {...css.item}>
+                                            <Image
+                                                src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
+                                                {...css.image}
+                                            />
+                                            <Heading className='tour-name' {...css.subnames}>{item[`name_${i18n?.language}`]}</Heading>
+                                            <Flex align={'center'} justify={'space-between'}>
+                                                <Flex
+                                                    {...css.flex}
+                                                >
+                                                    <Image {...css.icon} src={LocationIcon} /> Destination:
+                                                </Flex>
+                                                <Text {...css.flex}>Uzbekistan, Tashkent</Text>
+                                            </Flex>
+                                            <Flex align={'center'} justify={'space-between'}>
+                                                <Flex
+                                                    {...css.flex}
+                                                >
+                                                    <Image {...css.icon} src={LocationIcon} /> Dates:
+                                                </Flex>
+                                                <Text {...css.flex}>Avaible during the year</Text>
+                                            </Flex>
+                                            <Flex align={'center'} justify={'space-between'}>
+                                                <Flex
+                                                    {...css.flex}
+                                                >
+                                                    <Image {...css.icon} src={LocationIcon} /> Group size:
+                                                </Flex>
+                                                <Text {...css.flex}>Max 10 people</Text>
+                                            </Flex>
+                                            <hr />
+                                            <Link
+                                                onClick={() => window.scrollTo(0, 0)}
+                                                to={`/tours/about/${item?.id}`}>
+                                                <Button {...css.button}>{t("Details")}</Button>
+                                            </Link>
+                                            {/* <Flex align={'center'} justify={'space-between'}>
                                     <Heading {...css.subname}>832$</Heading>
                                     <Text {...css.text}>per night</Text>
                                 </Flex> */}
-                            </Box>
-                        ))
+                                        </Box>
+                                    ))
+                                }
+                            </>
+                        ) : (
+                            <>
+                                {
+                                    subtour?.map((item, index) => (
+                                        <Box key={index} {...css.item}>
+                                            <Image
+                                                src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
+                                                {...css.image}
+                                            />
+                                            <Heading className='tour-name' {...css.subnames}>{item[`name_${i18n?.language}`]}</Heading>
+                                            <Flex align={'center'} justify={'space-between'}>
+                                                <Flex
+                                                    {...css.flex}
+                                                >
+                                                    <Image {...css.icon} src={LocationIcon} /> Destination:
+                                                </Flex>
+                                                <Text {...css.flex}>Uzbekistan, Tashkent</Text>
+                                            </Flex>
+                                            <Flex align={'center'} justify={'space-between'}>
+                                                <Flex
+                                                    {...css.flex}
+                                                >
+                                                    <Image {...css.icon} src={LocationIcon} /> Dates:
+                                                </Flex>
+                                                <Text {...css.flex}>Avaible during the year</Text>
+                                            </Flex>
+                                            <Flex align={'center'} justify={'space-between'}>
+                                                <Flex
+                                                    {...css.flex}
+                                                >
+                                                    <Image {...css.icon} src={LocationIcon} /> Group size:
+                                                </Flex>
+                                                <Text {...css.flex}>Max 10 people</Text>
+                                            </Flex>
+                                            <hr />
+                                            <Link
+                                                onClick={() => window.scrollTo(0, 0)}
+                                                to={`/tours/about/${item?.id}`}>
+                                                <Button {...css.button}>{t("Details")}</Button>
+                                            </Link>
+                                            {/* <Flex align={'center'} justify={'space-between'}>
+                                    <Heading {...css.subname}>832$</Heading>
+                                    <Text {...css.text}>per night</Text>
+                                </Flex> */}
+                                        </Box>
+                                    ))
+                                }
+                            </>
+                        )
                     }
                 </SimpleGrid>
             </Box>

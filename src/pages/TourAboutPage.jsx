@@ -43,7 +43,7 @@ const TourAboutPage = () => {
                         {
                             subtour?.map((item, index) => (
                                 <Box key={index} {...css.bottom}>
-                                    <Heading  {...css.title}>{item[`name_${i18n?.language}`]}</Heading>
+                                    <Heading className='tour-name'  {...css.title}>{item[`name_${i18n?.language}`]}</Heading>
                                 </Box>
                             ))
                         }
