@@ -1,20 +1,41 @@
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
+import { BASE_URL } from '../service';
+
+import LocationIcon from '../assets/pin.png'
 
 
 const HotelAboutPage = () => {
+    const { t, i18n } = useTranslation()
+    const { id } = useParams()
+    const [hotel, setHotel] = useState([])
+
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/hotels/${id}`)
+            .then((res) => setHotel(res?.data?.data))
+            .catch((err) => console.log(err));
+    }, []);
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
                 <Image
-                    src={"https://avatars.mds.yandex.net/get-altay/1773749/2a0000016a7eb16d0e2d4357d3a5156f319e/XXL_height"}
+                    src={`${BASE_URL}/uploads/images/${hotel?.hotel_images?.[0]?.image_src}`}
                     {...css.image}
                 />
                 <Flex>
                     <Box w={'60%'}>
-                        <Heading {...css.name}>Art Institute of Chicago</Heading>
+                        <Heading {...css.name}>{hotel[`name_${i18n?.language}`]}</Heading>
+                        <Flex
+                            {...css.flex}
+                        >
+                            <Image {...css.icon} src={LocationIcon} /> {hotel?.address}
+                        </Flex>
                         <Text {...css.text}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum deleniti pariatur culpa maxime repudiandae molestiae laboriosam, sunt dicta totam, optio similique eligendi non. Illum non reprehenderit neque atque eveniet.
+                            {hotel[`text_${i18n?.language}`]}
                         </Text>
                     </Box>
                 </Flex>
@@ -51,5 +72,17 @@ const css = {
         lineHeight: "24px",
         color: "#988c7b",
         width: "100%",
+    },
+    flex: {
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight:"700",
+        color: "#988c7b",
+        alignItems: "center",
+        gap: "6px",
+        margin: "10px 0"
+    },
+    icon: {
+        width: "16px"
     },
 }

@@ -27,7 +27,7 @@ const HotelPage = () => {
                     gap={"24px"}
                     columns={{ base: 1, sm: 2, lg: 3 }}>
                     {
-                        hotel.map((item, index) => (
+                        hotel?.map((item, index) => (
                             <Box key={index} {...css.item}>
                                 <Image
                                     src={`${BASE_URL}/uploads/images/${item?.hotel_images[0]?.image_src}`}
@@ -43,7 +43,7 @@ const HotelPage = () => {
                                 <hr />
                                 <Link
                                     onClick={() => window.scrollTo(0, 0)}
-                                    to={`/destination/${item?.id}`}>
+                                    to={`/hotels/about/${item?.id}`}>
                                     <Button {...css.button}>{t("Details")}</Button>
                                 </Link>
                                 {/* <Flex align={'center'} justify={'space-between'}>

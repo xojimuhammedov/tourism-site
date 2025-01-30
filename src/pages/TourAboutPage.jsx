@@ -9,11 +9,19 @@ const TourAboutPage = () => {
     const { t, i18n } = useTranslation()
     const { id } = useParams()
     const [tour, setTour] = useState([])
+    const [subtour, setSubtour] = useState([])
 
     useEffect(() => {
         axios
             .get(`${BASE_URL}/subtours/${id}`)
             .then((res) => setTour(res?.data?.data))
+            .catch((err) => console.log(err));
+    }, []);
+
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/subtours/`)
+            .then((res) => setSubtour(res?.data?.data))
             .catch((err) => console.log(err));
     }, []);
     return (
@@ -32,18 +40,13 @@ const TourAboutPage = () => {
                     </Box>
                     <Box {...css.item} w={'35%'}>
                         <Heading {...css.subname}>{t("Our Tours")}</Heading>
-                        <Box {...css.bottom}>
-                            <Heading {...css.title}>Art Institute of Chicago</Heading>
-                        </Box>
-                        <Box {...css.bottom}>
-                            <Heading {...css.title}>Art Institute of Chicago</Heading>
-                        </Box>
-                        <Box {...css.bottom}>
-                            <Heading {...css.title}>Art Institute of Chicago</Heading>
-                        </Box>
-                        <Box {...css.bottom}>
-                            <Heading {...css.title}>Art Institute of Chicago</Heading>
-                        </Box>
+                        {
+                            subtour?.map((item, index) => (
+                                <Box key={index} {...css.bottom}>
+                                    <Heading  {...css.title}>{item[`name_${i18n?.language}`]}</Heading>
+                                </Box>
+                            ))
+                        }
                     </Box>
                 </Flex>
             </Box>

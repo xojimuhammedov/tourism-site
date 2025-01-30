@@ -1,10 +1,11 @@
-import { Box, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 
 import LocationIcon from '../assets/pin.png'
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { BASE_URL } from '../service';
+import { Link } from 'react-router-dom';
 
 const TourPage = () => {
     const { t, i18n } = useTranslation()
@@ -12,11 +13,19 @@ const TourPage = () => {
 
     useEffect(() => {
         axios
-            .get(`${BASE_URL}/tours`)
+            .get(`${BASE_URL}/tours/`)
             .then((res) => setTour(res?.data?.data))
             .catch((err) => console.log(err));
     }, []);
 
+    const [subtour, setSubtour] = useState([])
+
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/subtours/`)
+            .then((res) => setSubtour(res?.data?.data))
+            .catch((err) => console.log(err));
+    }, []);
 
     return (
         <Box p={'36px 0'}>
@@ -26,7 +35,7 @@ const TourPage = () => {
                 <Flex mt={'24px'} gap={'18px'} align={'center'}>
                     <Heading {...css.subname}>All Tours</Heading>
                     {
-                        tour.map((item, index) => (
+                        tour?.map((item, index) => (
                             <Heading key={index} {...css.subname}> {item[`name_${i18n?.language}`]}</Heading>
                         ))
                     }
@@ -34,42 +43,51 @@ const TourPage = () => {
                 <SimpleGrid mt={"48px"}
                     gap={"24px"}
                     columns={{ base: 1, sm: 2, lg: 3 }}>
-                    <Box {...css.item}>
-                        <Image
-                            src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Art_Institute_of_Chicago_%2851575570710%29.jpg/250px-Art_Institute_of_Chicago_%2851575570710%29.jpg"}
-                            {...css.image}
-                        />
-                        <Heading {...css.subnames}>Art Institute of Chicago</Heading>
-                        <Flex align={'center'} justify={'space-between'}>
-                            <Flex
-                                {...css.flex}
-                            >
-                                <Image {...css.icon} src={LocationIcon} /> Destination:
-                            </Flex>
-                            <Text {...css.flex}>Uzbekistan, Tashkent</Text>
-                        </Flex>
-                        <Flex align={'center'} justify={'space-between'}>
-                            <Flex
-                                {...css.flex}
-                            >
-                                <Image {...css.icon} src={LocationIcon} /> Dates:
-                            </Flex>
-                            <Text {...css.flex}>Avaible from April to December</Text>
-                        </Flex>
-                        <Flex align={'center'} justify={'space-between'}>
-                            <Flex
-                                {...css.flex}
-                            >
-                                <Image {...css.icon} src={LocationIcon} /> Group size:
-                            </Flex>
-                            <Text {...css.flex}>Max 10 people</Text>
-                        </Flex>
-                        <hr />
-                        <Flex align={'center'} justify={'space-between'}>
-                            <Heading {...css.subname}>832$</Heading>
-                            <Text {...css.text}>per night</Text>
-                        </Flex>
-                    </Box>
+                    {
+                        subtour.map((item, index) => (
+                            <Box key={index} {...css.item}>
+                                <Image
+                                    src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
+                                    {...css.image}
+                                />
+                                <Heading {...css.subnames}>{item[`name_${i18n?.language}`]}</Heading>
+                                <Flex align={'center'} justify={'space-between'}>
+                                    <Flex
+                                        {...css.flex}
+                                    >
+                                        <Image {...css.icon} src={LocationIcon} /> Destination:
+                                    </Flex>
+                                    <Text {...css.flex}>Uzbekistan, Tashkent</Text>
+                                </Flex>
+                                <Flex align={'center'} justify={'space-between'}>
+                                    <Flex
+                                        {...css.flex}
+                                    >
+                                        <Image {...css.icon} src={LocationIcon} /> Dates:
+                                    </Flex>
+                                    <Text {...css.flex}>Avaible during the year</Text>
+                                </Flex>
+                                <Flex align={'center'} justify={'space-between'}>
+                                    <Flex
+                                        {...css.flex}
+                                    >
+                                        <Image {...css.icon} src={LocationIcon} /> Group size:
+                                    </Flex>
+                                    <Text {...css.flex}>Max 10 people</Text>
+                                </Flex>
+                                <hr />
+                                <Link
+                                    onClick={() => window.scrollTo(0, 0)}
+                                    to={`/tours/about/${item?.id}`}>
+                                    <Button {...css.button}>{t("Details")}</Button>
+                                </Link>
+                                {/* <Flex align={'center'} justify={'space-between'}>
+                                    <Heading {...css.subname}>832$</Heading>
+                                    <Text {...css.text}>per night</Text>
+                                </Flex> */}
+                            </Box>
+                        ))
+                    }
                 </SimpleGrid>
             </Box>
         </Box>
@@ -155,5 +173,22 @@ const css = {
         color: "#988c7b",
         padding: "0 15px",
         margin: "10px 0"
-    }
+    },
+    button: {
+        backgroundColor: "#604132",
+        color: "#fff",
+        height: "45px",
+        width: "94%",
+        margin: "10px 15px",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: "500",
+        marginTop: "20px",
+        transition: "0.3s",
+        borderRadius: "12px",
+
+        _hover: {
+            backgroundColor: "#2e1f0e",
+        },
+    },
 }
