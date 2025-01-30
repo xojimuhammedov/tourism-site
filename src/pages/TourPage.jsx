@@ -1,11 +1,23 @@
 import { Box, Flex, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import LocationIcon from '../assets/pin.png'
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
+import { BASE_URL } from '../service';
 
 const TourPage = () => {
-    const {t} = useTranslation()
+    const { t, i18n } = useTranslation()
+    const [tour, setTour] = useState([])
+
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/tours`)
+            .then((res) => setTour(res?.data?.data))
+            .catch((err) => console.log(err));
+    }, []);
+
+
     return (
         <Box p={'36px 0'}>
             <Box className='container'>
@@ -13,10 +25,11 @@ const TourPage = () => {
                 <Heading {...css.title}>{t("All Tours")}</Heading>
                 <Flex mt={'24px'} gap={'18px'} align={'center'}>
                     <Heading {...css.subname}>All Tours</Heading>
-                    <Heading {...css.subname}>Tashkent</Heading>
-                    <Heading {...css.subname}>Samarkand</Heading>
-                    <Heading {...css.subname}>Bukhara</Heading>
-                    <Heading {...css.subname}>Khiva</Heading>
+                    {
+                        tour.map((item, index) => (
+                            <Heading key={index} {...css.subname}> {item[`name_${i18n?.language}`]}</Heading>
+                        ))
+                    }
                 </Flex>
                 <SimpleGrid mt={"48px"}
                     gap={"24px"}

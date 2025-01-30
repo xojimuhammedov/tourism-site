@@ -1,23 +1,37 @@
 import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { BASE_URL } from '../service';
+import { useParams } from 'react-router-dom';
 
 const TourAboutPage = () => {
+    const { t, i18n } = useTranslation()
+    const { id } = useParams()
+    const [tour, setTour] = useState([])
+
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/subtours/${id}`)
+            .then((res) => setTour(res?.data?.data))
+            .catch((err) => console.log(err));
+    }, []);
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
                 <Flex justify={'space-between'}>
                     <Box w={'60%'}>
                         <Image
-                            src={"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Art_Institute_of_Chicago_%2851575570710%29.jpg/250px-Art_Institute_of_Chicago_%2851575570710%29.jpg"}
+                            src={`${BASE_URL}/uploads/images/${tour?.sub_tour_images?.[1]?.image_src}`}
                             {...css.image}
                         />
-                        <Heading {...css.name}>Art Institute of Chicago</Heading>
+                        <Heading {...css.name}>{tour[`name_${i18n?.language}`]}</Heading>
                         <Text {...css.text}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur rerum deleniti pariatur culpa maxime repudiandae molestiae laboriosam, sunt dicta totam, optio similique eligendi non. Illum non reprehenderit neque atque eveniet.
+                            {tour[`text_${i18n?.language}`]}
                         </Text>
                     </Box>
                     <Box {...css.item} w={'35%'}>
-                        <Heading {...css.subname}>Our Tours</Heading>
+                        <Heading {...css.subname}>{t("Our Tours")}</Heading>
                         <Box {...css.bottom}>
                             <Heading {...css.title}>Art Institute of Chicago</Heading>
                         </Box>

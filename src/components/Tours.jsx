@@ -11,17 +11,20 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import { BASE_URL } from "../service";
 
 function Tours() {
-  const [destination, setDestination] = useState([]);
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  const [tour, setTour] = useState([])
 
   useEffect(() => {
     axios
-      .get("https://test.al-muamalat.uz/api/destination")
-      .then((res) => setDestination(res.data))
+      .get(`${BASE_URL}/subtours`)
+      .then((res) => setTour(res?.data?.data))
       .catch((err) => console.log(err));
   }, []);
+
 
   return (
     <Box id="destination" p={"36px 0"}>
@@ -32,25 +35,22 @@ function Tours() {
           mt={"48px"}
           gap={"24px"}
           columns={{ base: 1, sm: 2, lg: 3 }}>
-          {destination?.data?.map((item, index) => (
+          {tour?.map((item, index) => (
             <Box key={index} {...css.item}>
               <Image
-                src={`${'https://test.al-muamalat.uz/files'}/${item?.images?.[0]?.url?.replace(
-                  "uploads/",
-                  ""
-                )}`}
+                src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
                 {...css.image}
               />
-              <Heading {...css.subname}>{item?.title}</Heading>
+              <Heading {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
               <Text
                 {...css.text}
-                dangerouslySetInnerHTML={{
-                  __html: item?.description?.slice(0, 95),
-                }}
-              />
+                className="service-text"
+              >
+                {item[`text_${i18n?.language}`]}
+              </Text>
               <Link
                 onClick={() => window.scrollTo(0, 0)}
-                to={`/destination/${item?.id}`}>
+                to={`/tours/about/${item?.id}`}>
                 <Button {...css.button}>{t("Details")}</Button>
               </Link>
             </Box>
