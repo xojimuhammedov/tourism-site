@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BASE_URL } from '../service';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 
 var settings = {
@@ -55,7 +55,7 @@ const TourAboutPage = () => {
             .get(`${BASE_URL}/subtours/${id}`)
             .then((res) => setTour(res?.data?.data))
             .catch((err) => console.log(err));
-    }, []);
+    }, [id]);
 
     useEffect(() => {
         axios
@@ -81,9 +81,11 @@ const TourAboutPage = () => {
                         <Heading {...css.subname}>{t("Our Tours")}</Heading>
                         {
                             subtour?.map((item, index) => (
-                                <Box key={index} {...css.bottom}>
-                                    <Heading className='tour-name'  {...css.title}>{item[`name_${i18n?.language}`]}</Heading>
-                                </Box>
+                                <Link to={`/tours/about/${item?.id}`}>
+                                    <Box key={index} {...css.bottom}>
+                                        <Heading className='tour-name' {...css.title}>{item[`name_${i18n?.language}`]}</Heading>
+                                    </Box>
+                                </Link>
                             ))
                         }
                     </Box>
@@ -116,7 +118,7 @@ const css = {
         height: "400px",
         objectFit: "cover",
         width: "95% !important",
-        marginTop:"36px"
+        marginTop: "36px"
     },
     name: {
         color: "#2e1f0e",
