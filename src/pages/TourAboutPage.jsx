@@ -4,6 +4,45 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BASE_URL } from '../service';
 import { useParams } from 'react-router-dom';
+import Slider from 'react-slick';
+
+var settings = {
+    speed: 7000,
+    dots: false,
+    autoplay: true,
+    infinite: true,
+    slidesToShow: 2,
+    autoplaySpeed: 0,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    pauseOnHover: false,
+    responsive: [
+        {
+            breakpoint: 1260,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 1060,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
+};
 
 const TourAboutPage = () => {
     const { t, i18n } = useTranslation()
@@ -50,6 +89,15 @@ const TourAboutPage = () => {
                     </Box>
                 </Flex>
             </Box>
+            <Slider {...settings}>
+                {
+                    tour?.sub_tour_images?.map((item, index) => (
+                        <Image
+                            {...css.images}
+                            key={index} src={`${BASE_URL}/uploads/images/${item?.image_src}`} />
+                    ))
+                }
+            </Slider>
         </Box>
     );
 }
@@ -62,6 +110,13 @@ const css = {
         height: "450px",
         objectFit: "cover",
         width: "100%"
+    },
+    images: {
+        borderRadius: "8px",
+        height: "400px",
+        objectFit: "cover",
+        width: "95% !important",
+        marginTop:"36px"
     },
     name: {
         color: "#2e1f0e",
