@@ -12,6 +12,7 @@ import ContactPage from './pages/ContactPage'
 import TourPage from './pages/TourPage'
 import TourAboutPage from './pages/TourAboutPage'
 import HotelAboutPage from './pages/HotelAboutPage'
+import Information from './components/Information'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <About />
           <Services />
           <Tours />
+          <Information />
         </>} />
         <Route path='/gallery' element={<GalleryPage />} />
         <Route path='/hotels' element={<HotelPage />} />
