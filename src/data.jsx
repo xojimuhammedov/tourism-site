@@ -75,8 +75,8 @@ export const countryData = [
         text_en: "Tajikistan's official name is the Republic of Tajikistan. It is the only Persian-speaking state in the former Soviet Central Asia and the smallest state in Central Asia. Tajikistan is located in the foothills of the Pamir Mountains, bordered by Uzbekistan and Kyrgyzstan to the west and north, China to the east, and Afghanistan to the south. The capital is Dushanbe. Tajikistan has been a member of the UN and OSCE since 1992. It is located in the southeastern part of Central Asia. The largest glaciers in Central Asia, Fedchenko and Zaravshanskiy, are in Tajikistan's mountains.",
         text_tr: "Tacikistan’ın resmi adı Tacikistan Cumhuriyeti’dir. Eski Sovyet Orta Asya’sında, Farsça konuşan tek devlet olup, Orta Asya’nın en küçük devletidir. Tacikistan, Pamir Dağları'nın eteklerinde yer alır, batıda ve kuzeyde Özbekistan ve Kırgızistan, doğuda Çin ve güneyde Afganistan ile kara sınırına sahiptir. Başkenti Duşanbe’dir. Tacikistan 1992 yılından beri BM ve AGİT üyesidir. Orta Asya'nın güneydoğusunda yer alır. Orta Asya'nın en büyük buzulları olan Fedçenko ve Zaravshanskiy, Tacikistan'ın dağlarında yer almaktadır.",
         icon: TajikImage
-      },
-      {
+    },
+    {
         id: 4,
         title_uz: "To‘rtmeneiston haqida umumiy ma'lumot",
         title_ru: "Общая информация о Туркменистане",
@@ -87,5 +87,5 @@ export const countryData = [
         text_en: "Turkmenistan is a country of deserts and oases, with unique historical and cultural traditions. The most ancient civilizations of the world flourished on its territory. It is one of the richest states in the world with gas and oil reserves. At the same time, the history of the country's independence spans only a few years. Modern Turkmenistan has proclaimed its special development path. Representatives of many nationalities live in Turkmenistan; however, most of the population is Turkmen. Large groups of Turkmen live in Uzbekistan, Afghanistan, and Iran. There are significant communities of Uzbeks (9%) and Kazakhs (2%). A significant portion of the population is Russian and Russian-speaking people (about 7%).",
         text_tr: "Türkmenistan, çöller ve vahalar, kendine özgü tarihi ve kültürel geleneklere sahip bir ülkedir. Dünyanın en eski medeniyetleri topraklarında gelişmiştir. Gaz ve petrol rezervleri ile dünyanın en zengin ülkelerinden biridir. Aynı zamanda, ülkenin bağımsızlık tarihi birkaç yıl ile sınırlıdır. Modern Türkmenistan, özel bir gelişim yolu ilan etmiştir. Türkmenistan’da birçok milliyetin temsilcileri yaşamaktadır; ancak nüfusun çoğunluğunu Türkmenler oluşturur. Türkmenlerin büyük grupları Özbekistan, Afganistan ve İran’da yaşamaktadır. Ülkede önemli bir Özbek (yüzde 9) ve Kazak (yüzde 2) nüfusu bulunmaktadır. Nüfusun büyük bir kısmı Ruslar ve Rusça konuşan insanlardan oluşmaktadır (yaklaşık yüzde 7).",
         icon: TurkmanImage
-      }
+    }
 ]

@@ -9,21 +9,29 @@
 }
 
 
-.container{
+.container {
   max-width: 1340px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-a{
+a {
   transition: 0.3s;
 }
 
-a:hover{
+a:hover {
   text-decoration: none !important;
 }
 
-h1,h2,h3,h4,h5,h6,p,a,button{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
   font-family: 'Inter', sans-serif !important;
 }
