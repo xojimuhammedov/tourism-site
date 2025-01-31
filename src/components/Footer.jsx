@@ -22,7 +22,7 @@ function Footer() {
                 <Image {...css.image} src={LogoIcon} alt="Logo" />
                 <SimpleGrid
                     {...css.box}
-                    columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+                    columns={{ base: 1, sm: 2, md: 3, lg: 3 }}
                     spacing={10}>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("INFORMATION")}</Heading>
@@ -40,7 +40,7 @@ function Footer() {
                             <Text {...css.link}>{t("Contact Us")}</Text>
                         </Alink>
                     </Flex>
-                    <Flex flexDirection={"column"}>
+                    {/* <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("SERVICES")}</Heading>
                         <Alink to={"/"}>
                             <Text {...css.link}>{t("Международные грузоперевозки")}</Text>
@@ -54,7 +54,7 @@ function Footer() {
                         <Alink to={"/"}>
                             <Text {...css.link}>{t("Логистический консалтинг")}</Text>
                         </Alink>
-                    </Flex>
+                    </Flex> */}
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("Contact")}</Heading>
                         <Link {...css.link} target="_blank" href={"tel:+998977472806"}>

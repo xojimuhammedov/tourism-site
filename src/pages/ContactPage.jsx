@@ -11,8 +11,8 @@ const ContactPage = () => {
                     <Box>
                         <Heading {...css.title}>{t("Contact Us")}</Heading>
                         <Text {...css.text}>{t("Have questions or need assistance? Feel free to reach out to us. We’re here to help with any inquiries.")} </Text>
-                        <Link {...css.link} target="_blank" href={"tel:+77753378595"}>
-                            +7 775 337 85 95
+                        <Link {...css.link} target="_blank" href={"tel:+998977472806"}>
+                            +998 97 747 28 06
                         </Link>
                         <Link
                             {...css.link}

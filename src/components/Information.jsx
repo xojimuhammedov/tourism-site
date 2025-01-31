@@ -5,7 +5,7 @@ import { countryData, flagData } from '../data';
 import { Link } from 'react-router-dom';
 
 const Information = () => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
     const [flagId, setFlagId] = useState("1")
     const data = countryData.find((item) => item.id === Number(flagId))
     return (
@@ -17,8 +17,8 @@ const Information = () => {
                     {
                         flagData?.map((item, index) => (
                             <Flex onClick={() => setFlagId(item?.id)} {...css.item} key={index}>
-                                <Image {...css.icon} alt={item.title} src={item.icon} />
-                                <Heading {...css.subname}>{item.title}</Heading>
+                                <Image {...css.icon} alt={item.title_en} src={item.icon} />
+                                <Heading {...css.subname}>{item[`title_${i18n?.language}`]}</Heading>
                             </Flex>
                         ))
                     }
@@ -26,10 +26,10 @@ const Information = () => {
                 <Flex {...css.box}>
                     <Image {...css.image} src={data.icon} />
                     <Box>
-                        <Heading {...css.subnames}>{data.title}</Heading>
-                        <Text className='information-text' {...css.text}>{data.text}</Text>
+                        <Heading {...css.subnames}>{data[`title_${i18n?.language}`]}</Heading>
+                        <Text className='information-text' {...css.text}>{data[`text_${i18n?.language}`]}</Text>
                         <Link to={'/'}>
-                            <Text {...css.link}>Batafsil</Text>
+                            <Text {...css.link}>{t("Batafsil")}</Text>
                         </Link>
                     </Box>
                 </Flex>
