@@ -13,6 +13,7 @@ import TourPage from './pages/TourPage'
 import TourAboutPage from './pages/TourAboutPage'
 import HotelAboutPage from './pages/HotelAboutPage'
 import Information from './components/Information'
+import TransportPage from './pages/TransportPage'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/tours' element={<TourPage />} />
         <Route path='/tours/about/:id' element={<TourAboutPage />} />
+        <Route path='/transport' element={<TransportPage />} />
       </Routes>
       <Footer />
     </>

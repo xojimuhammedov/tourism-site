@@ -3,6 +3,13 @@ import KrygzImage from './assets/krygz.png'
 import TajikImage from './assets/tajik.png'
 import TurkmanImage from './assets/turkman.png'
 
+import CarOneImage from './assets/car-1.jpg'
+import CarTwoImage from './assets/car-2.jpg'
+import CarThreeImage from './assets/car-3.jpg'
+import CarFourImage from './assets/car-4.jpg'
+import CarFiveImage from './assets/car-5.jpg'
+import CarSixImage from './assets/car-6.jpg'
+
 export const flagData = [
     {
         id: 1,
@@ -87,5 +94,44 @@ export const countryData = [
         text_en: "Turkmenistan is a country of deserts and oases, with unique historical and cultural traditions. The most ancient civilizations of the world flourished on its territory. It is one of the richest states in the world with gas and oil reserves. At the same time, the history of the country's independence spans only a few years. Modern Turkmenistan has proclaimed its special development path. Representatives of many nationalities live in Turkmenistan; however, most of the population is Turkmen. Large groups of Turkmen live in Uzbekistan, Afghanistan, and Iran. There are significant communities of Uzbeks (9%) and Kazakhs (2%). A significant portion of the population is Russian and Russian-speaking people (about 7%).",
         text_tr: "Türkmenistan, çöller ve vahalar, kendine özgü tarihi ve kültürel geleneklere sahip bir ülkedir. Dünyanın en eski medeniyetleri topraklarında gelişmiştir. Gaz ve petrol rezervleri ile dünyanın en zengin ülkelerinden biridir. Aynı zamanda, ülkenin bağımsızlık tarihi birkaç yıl ile sınırlıdır. Modern Türkmenistan, özel bir gelişim yolu ilan etmiştir. Türkmenistan’da birçok milliyetin temsilcileri yaşamaktadır; ancak nüfusun çoğunluğunu Türkmenler oluşturur. Türkmenlerin büyük grupları Özbekistan, Afganistan ve İran’da yaşamaktadır. Ülkede önemli bir Özbek (yüzde 9) ve Kazak (yüzde 2) nüfusu bulunmaktadır. Nüfusun büyük bir kısmı Ruslar ve Rusça konuşan insanlardan oluşmaktadır (yaklaşık yüzde 7).",
         icon: TurkmanImage
+    }
+]
+
+export const carData = [
+    {
+        id: 1,
+        title: "Railway Station - Samarkand City Transfer",
+        text: "Convenient and economical means of transportation with A/C between cities. You don't need to look for taxi drivers or other means of transports. Just tell us your location and your driver will be there at the specified time.",
+        image: CarOneImage
+    },
+    {
+        id: 2,
+        title: "Private Intercity Transfer Tashkent",
+        text: "This is a one-way trip, we pick up all travelers from hotels, located in Tashkent and drop them off at hotels, airports & train stations in Samarkand or vice versa. Please confirm when we pick you up from the hotels and where we drop you off.",
+        image: CarTwoImage
+    },
+    {
+        id: 3,
+        title: "Tashkent - Samarkand transfer by Minivan up to 4 people",
+        text: "Our experienced driver with the air conditioned minivan will pick you up from any location within Tashkent city and drive you to Samarkand city and drop you off at any location. On the road you can stop to get some food, drinks and go to restroom.",
+        image: CarThreeImage
+    },
+    {
+        id: 4,
+        title: "Safe Private Transfer in Tashkent Uzbekistan",
+        text: "We offer drivers who are proficient in English and Russian, as well as tour operators who speak English, Russian, and Spanish, ensuring smooth communication. Our services also include punctual pick-up and drop-off, guaranteeing a reliable and efficient experience.",
+        image: CarFourImage
+    },
+    {
+        id: 5,
+        title: "Tashkent Airport (TAS) Private Transfer to Tashkent City/Hotels",
+        text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
+        image: CarFiveImage
+    },
+    {
+        id: 6,
+        title: "Tashkent Airport (TAS) to Tashkent - Arrival Private Transfer",
+        text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
+        image: CarSixImage
     }
 ]

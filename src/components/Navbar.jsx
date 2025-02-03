@@ -8,7 +8,7 @@ import Language from './Language';
 import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
-    const {t} = useTranslation()
+    const { t } = useTranslation()
     return (
         <Box {...css.navbar}>
             <Box className='container'>
@@ -24,6 +24,9 @@ const Navbar = () => {
                         </Alink>
                         <Alink to='/hotels'>
                             <Text {...css.link}>{t("Hotels")}</Text>
+                        </Alink>
+                        <Alink to='/transport'>
+                            <Text {...css.link}>{t("Transport")}</Text>
                         </Alink>
                         <Alink to='/contact'>
                             <Text {...css.link}>{t("Contact Us")}</Text>
