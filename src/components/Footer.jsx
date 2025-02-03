@@ -70,7 +70,7 @@ function Footer() {
                             target="_blank"
                             {...css.link}
                             href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
-                            Uzbekistan, Tashkent city, Miraabad district
+                           Uzbekistan, Tashkent, Yakkasaray district Shota Rustaveli street 43
                         </Link>
                     </Flex>
                     <Flex flexDirection={"column"}>
