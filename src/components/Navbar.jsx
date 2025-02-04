@@ -18,9 +18,11 @@ const Navbar = () => {
                     </Alink>
                     <Flex align={'center'} gap={'36px'}>
                         <Link {...css.link} href='/'>{t("Home")}</Link>
-                        <Link {...css.link} href='/'>{t("About Us")}</Link>
                         <Alink to='/tours'>
                             <Text {...css.link}>{t("Tours")}</Text>
+                        </Alink>
+                        <Alink to='/destination'>
+                            <Text {...css.link}>{t("Destinations")}</Text>
                         </Alink>
                         <Alink to='/hotels'>
                             <Text {...css.link}>{t("Hotels")}</Text>

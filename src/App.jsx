@@ -14,6 +14,8 @@ import TourAboutPage from './pages/TourAboutPage'
 import HotelAboutPage from './pages/HotelAboutPage'
 import Information from './components/Information'
 import TransportPage from './pages/TransportPage'
+import DestinationPage from './pages/DestinationPage'
+import DestinationAboutPage from './pages/DestinationAboutPage'
 
 function App() {
 
@@ -35,6 +37,8 @@ function App() {
         <Route path='/tours' element={<TourPage />} />
         <Route path='/tours/about/:id' element={<TourAboutPage />} />
         <Route path='/transport' element={<TransportPage />} />
+        <Route path='/destination' element={<DestinationPage />} />
+        <Route path='/destination/about/:id' element={<DestinationAboutPage />} />
       </Routes>
       <Footer />
     </>

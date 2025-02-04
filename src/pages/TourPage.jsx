@@ -89,10 +89,6 @@ const TourPage = () => {
                                                 to={`/tours/about/${item?.id}`}>
                                                 <Button {...css.button}>{t("Details")}</Button>
                                             </Link>
-                                            {/* <Flex align={'center'} justify={'space-between'}>
-                                    <Heading {...css.subname}>832$</Heading>
-                                    <Text {...css.text}>per night</Text>
-                                </Flex> */}
                                         </Box>
                                     ))
                                 }
