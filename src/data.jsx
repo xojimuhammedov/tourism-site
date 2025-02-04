@@ -97,41 +97,116 @@ export const countryData = [
     }
 ]
 
+// export const carData = [
+//     {
+//         id: 1,
+//         title: "Railway Station - Samarkand City Transfer",
+//         text: "Convenient and economical means of transportation with A/C between cities. You don't need to look for taxi drivers or other means of transports. Just tell us your location and your driver will be there at the specified time.",
+//         image: CarOneImage
+//     },
+//     {
+//         id: 2,
+//         title: "Private Intercity Transfer Tashkent",
+//         text: "This is a one-way trip, we pick up all travelers from hotels, located in Tashkent and drop them off at hotels, airports & train stations in Samarkand or vice versa. Please confirm when we pick you up from the hotels and where we drop you off.",
+//         image: CarTwoImage
+//     },
+//     {
+//         id: 3,
+//         title: "Tashkent - Samarkand transfer by Minivan up to 4 people",
+//         text: "Our experienced driver with the air conditioned minivan will pick you up from any location within Tashkent city and drive you to Samarkand city and drop you off at any location. On the road you can stop to get some food, drinks and go to restroom.",
+//         image: CarThreeImage
+//     },
+//     {
+//         id: 4,
+//         title: "Safe Private Transfer in Tashkent Uzbekistan",
+//         text: "We offer drivers who are proficient in English and Russian, as well as tour operators who speak English, Russian, and Spanish, ensuring smooth communication. Our services also include punctual pick-up and drop-off, guaranteeing a reliable and efficient experience.",
+//         image: CarFourImage
+//     },
+// {
+//     id: 5,
+//     title: "Tashkent Airport (TAS) Private Transfer to Tashkent City/Hotels",
+//     text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
+//     image: CarFiveImage
+// },
+// {
+//     id: 6,
+//     title: "Tashkent Airport (TAS) to Tashkent - Arrival Private Transfer",
+//     text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
+//     image: CarSixImage
+// }
+// ]
+
 export const carData = [
     {
         id: 1,
-        title: "Railway Station - Samarkand City Transfer",
-        text: "Convenient and economical means of transportation with A/C between cities. You don't need to look for taxi drivers or other means of transports. Just tell us your location and your driver will be there at the specified time.",
+        title_uz: "Temir yo‘l vokzali - Samarqand shahri transfer",
+        title_en: "Railway Station - Samarkand City Transfer",
+        title_ru: "Железнодорожный вокзал - трансфер в город Самарканд",
+        title_tr: "Demiryolu İstasyonu - Semerkand Şehir Transferi",
+        text_uz: "Shaharlararo konditsionerli qulay va tejamkor transport. Taksichilar yoki boshqa transport izlash shart emas. Faqat joylashuvingizni ayting va haydovchi belgilangan vaqtda yetib keladi.",
+        text_en: "Convenient and economical means of transportation with A/C between cities. You don't need to look for taxi drivers or other means of transport. Just tell us your location and your driver will be there at the specified time.",
+        text_ru: "Удобное и экономичное средство передвижения с кондиционером между городами. Вам не нужно искать таксистов или другие виды транспорта. Просто укажите свое местоположение, и водитель прибудет в назначенное время.",
+        text_tr: "Şehirler arasında klimalı, uygun ve ekonomik ulaşım. Taksi şoförleri veya başka ulaşım araçları aramanıza gerek yok. Sadece konumunuzu belirtin, şoförünüz belirlenen saatte orada olacak.",
         image: CarOneImage
     },
     {
         id: 2,
-        title: "Private Intercity Transfer Tashkent",
-        text: "This is a one-way trip, we pick up all travelers from hotels, located in Tashkent and drop them off at hotels, airports & train stations in Samarkand or vice versa. Please confirm when we pick you up from the hotels and where we drop you off.",
+        title_uz: "Shaxsiy shaharlararo transfer Toshkent",
+        title_en: "Private Intercity Transfer Tashkent",
+        title_ru: "Частный междугородний трансфер Ташкент",
+        title_tr: "Özel Şehirlerarası Transfer Taşkent",
+        text_uz: "Bu bir tomonlama safar bo‘lib, biz barcha sayohatchilarni Toshkentdagi mehmonxonalardan olib, Samarqanddagi mehmonxonalar, aeroportlar va vokzallarga yetkazib beramiz yoki aksincha. Jo‘nab ketish va manzilni oldindan tasdiqlang.",
+        text_en: "This is a one-way trip, we pick up all travelers from hotels, located in Tashkent and drop them off at hotels, airports & train stations in Samarkand or vice versa. Please confirm when we pick you up from the hotels and where we drop you off.",
+        text_ru: "Это поездка в одном направлении: мы забираем всех путешественников из отелей в Ташкенте и доставляем их в отели, аэропорты и вокзалы Самарканда или наоборот. Пожалуйста, подтвердите, когда мы вас забираем и куда вас доставить.",
+        text_tr: "Bu tek yönlü bir yolculuktur, Taşkent'teki otellerden tüm yolcuları alıp, Semerkand'daki oteller, havalimanları ve tren istasyonlarına bırakıyoruz veya tam tersi. Lütfen sizi nereden alıp nereye bırakacağımızı önceden onaylayın.",
         image: CarTwoImage
     },
     {
         id: 3,
-        title: "Tashkent - Samarkand transfer by Minivan up to 4 people",
-        text: "Our experienced driver with the air conditioned minivan will pick you up from any location within Tashkent city and drive you to Samarkand city and drop you off at any location. On the road you can stop to get some food, drinks and go to restroom.",
+        title_uz: "Toshkent - Samarqand 4 kishilik miniven transferi",
+        title_en: "Tashkent - Samarkand transfer by Minivan up to 4 people",
+        title_ru: "Трансфер Ташкент - Самарканд на минивэне до 4 человек",
+        title_tr: "Taşkent - Semerkand 4 Kişiye Kadar Minivan Transferi",
+        text_uz: "Tajribali haydovchimiz konditsionerli miniven bilan Toshkent shahrining istalgan joyidan sizni olib, Samarqand shahrining istalgan joyiga olib boradi. Yo‘lda ovqatlanish, ichimlik olish va hojatxonaga to‘xtash imkoniyati mavjud.",
+        text_en: "Our experienced driver with the air-conditioned minivan will pick you up from any location within Tashkent city and drive you to Samarkand city and drop you off at any location. On the road, you can stop to get some food, drinks, and go to the restroom.",
+        text_ru: "Наш опытный водитель на кондиционированном минивэне заберет вас из любого места в Ташкенте и отвезет в Самарканд, высадив в любом удобном месте. По дороге можно сделать остановки для еды, напитков и посещения туалета.",
+        text_tr: "Deneyimli şoförümüz, klimalı minivan ile Taşkent şehrindeki herhangi bir yerden sizi alıp, Semerkand şehrindeki herhangi bir yere bırakacaktır. Yol boyunca yemek, içecek almak ve tuvalet molası vermek mümkündür.",
         image: CarThreeImage
     },
     {
         id: 4,
-        title: "Safe Private Transfer in Tashkent Uzbekistan",
-        text: "We offer drivers who are proficient in English and Russian, as well as tour operators who speak English, Russian, and Spanish, ensuring smooth communication. Our services also include punctual pick-up and drop-off, guaranteeing a reliable and efficient experience.",
+        title_uz: "Xavfsiz shaxsiy transfer Toshkent, O‘zbekiston",
+        title_en: "Safe Private Transfer in Tashkent Uzbekistan",
+        title_ru: "Безопасный частный трансфер в Ташкенте, Узбекистан",
+        title_tr: "Taşkent Özbekistan'da Güvenli Özel Transfer",
+        text_uz: "Biz ingliz va rus tillarini biladigan haydovchilar hamda ingliz, rus va ispan tillarida gaplashadigan tur operatorlarini taqdim etamiz, bu esa muloqotni osonlashtiradi. O‘z vaqtida olib ketish va yetkazib berish xizmatlarimiz ishonchli va samarali.",
+        text_en: "We offer drivers who are proficient in English and Russian, as well as tour operators who speak English, Russian, and Spanish, ensuring smooth communication. Our services also include punctual pick-up and drop-off, guaranteeing a reliable and efficient experience.",
+        text_ru: "Мы предлагаем водителей, владеющих английским и русским языками, а также туроператоров, говорящих на английском, русском и испанском языках, что обеспечивает легкость общения. Наши услуги включают своевременную подачу и доставку, гарантируя надежность и эффективность.",
+        text_tr: "İngilizce ve Rusça bilen şoförlerimizin yanı sıra, İngilizce, Rusça ve İspanyolca konuşan tur operatörleri sunuyoruz, bu da iletişimi kolaylaştırır. Hizmetlerimiz zamanında alınma ve bırakılmayı içerir, güvenilir ve verimli bir deneyim sunar.",
         image: CarFourImage
     },
     {
         id: 5,
-        title: "Tashkent Airport (TAS) Private Transfer to Tashkent City/Hotels",
-        text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
+        title_uz: "Toshkent aeroportidan (TAS) shaxsiy transfer shaharga/Mehmonxonaga",
+        title_en: "Tashkent Airport (TAS) Private Transfer to Tashkent City/Hotels",
+        title_ru: "Частный трансфер из аэропорта Ташкента (TAS) в город/отели",
+        title_tr: "Taşkent Havalimanı (TAS) Özel Transfer Şehir/Oteller",
+        text_uz: "Ishonchli va qulay transport xizmati. Tajribali haydovchilarimiz silliq sayohatni ta'minlaydi, sayohatchilar uchun stresssiz xizmat ko'rsatadi. 24/7 mavjud.",
+        text_en: "Reliable and convenient transportation. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. Available 24/7.",
+        text_ru: "Надежный и удобный транспорт. Наши профессиональные водители обеспечивают плавную поездку, предлагая путешественникам бесстрессовый сервис. Доступно 24/7.",
+        text_tr: "Güvenilir ve konforlu ulaşım. Profesyonel şoförlerimiz, yolculuğunuzu sorunsuz ve stresiz hale getirir. 24/7 hizmet veriyoruz.",
         image: CarFiveImage
     },
     {
         id: 6,
-        title: "Tashkent Airport (TAS) to Tashkent - Arrival Private Transfer",
-        text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
+        title_uz: "Toshkent aeroportidan (TAS) shaxsiy transfer",
+        title_en: "Tashkent Airport (TAS) to Tashkent - Arrival Private Transfer",
+        title_ru: "Частный трансфер из аэропорта Ташкента (TAS) в город",
+        title_tr: "Taşkent Havalimanı (TAS) Şehir Özel Transfer",
+        text_uz: "Ishonchli va qulay transport xizmati. Tajribali haydovchilarimiz silliq sayohatni ta'minlaydi, sayohatchilar uchun stresssiz xizmat ko'rsatadi. 24/7 mavjud.",
+        text_en: "Reliable and convenient transportation. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. Available 24/7.",
+        text_ru: "Надежный и удобный транспорт. Наши профессиональные водители обеспечивают плавную поездку, предлагая путешественникам бесстрессовый сервис. Доступно 24/7.",
+        text_tr: "Güvenilir ve konforlu ulaşım. Profesyonel şoförlerimiz, yolculuğunuzu sorunsuz ve stresiz hale getirir. 24/7 hizmet veriyoruz.",
         image: CarSixImage
     }
-]
+];

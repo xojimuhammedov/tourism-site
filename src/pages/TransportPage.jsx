@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { carData } from '../data';
 
 const TransportPage = () => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
@@ -15,8 +15,8 @@ const TransportPage = () => {
                         <Flex key={index} {...css.box}>
                             <Image {...css.image} src={item.image} />
                             <Box>
-                                <Heading {...css.subnames}>{item.title}</Heading>
-                                <Text className='information-text' {...css.text}>{item.text}</Text>
+                                <Heading {...css.subnames}>{item[`title_${i18n?.language}`]}</Heading>
+                                <Text className='information-text' {...css.text}>{item[`text_${i18n?.language}`]}</Text>
                             </Box>
                         </Flex>
                     ))

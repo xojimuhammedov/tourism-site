@@ -57,7 +57,7 @@ const ContactPage = () => {
                         <Heading {...css.title}>{t("Connecting Near and Far")}</Heading>
                         <Text mt={'24px'} {...css.name}>{t("Headquarters")}</Text>
                         <Text mt={'12px'} {...css.texts}>
-                            Uzbekistan, Tashkent city, Miraabad district
+                            Uzbekistan, Tashkent, Yakkasaray district Shota Rustaveli street 43
                         </Text>
                     </Box>
                 </Flex>
