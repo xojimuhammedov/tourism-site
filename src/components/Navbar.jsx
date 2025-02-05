@@ -30,6 +30,9 @@ const Navbar = () => {
                         <Alink to='/transport'>
                             <Text {...css.link}>{t("Transport")}</Text>
                         </Alink>
+                        <Alink to='/gallery'>
+                            <Text {...css.link}>{t("Gallery")}</Text>
+                        </Alink>
                         <Alink to='/contact'>
                             <Text {...css.link}>{t("Contact Us")}</Text>
                         </Alink>

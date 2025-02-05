@@ -27,7 +27,7 @@ const HotelAboutPage = () => {
                     {...css.image}
                 />
                 <Flex>
-                    <Box w={'60%'}>
+                    <Box w={{ base: "100%", lg: "60%" }}>
                         <Heading {...css.name}>{hotel[`name_${i18n?.language}`]}</Heading>
                         <Flex
                             {...css.flex}
@@ -50,7 +50,10 @@ const css = {
     image: {
         width: "100%",
         objectFit: "cover",
-        height: "600px",
+        height: {
+            base: "300px",
+            lg: "600px"
+        },
         borderRadius: "8px"
     },
     name: {
@@ -76,7 +79,7 @@ const css = {
     flex: {
         fontSize: "16px",
         lineHeight: "24px",
-        fontWeight:"700",
+        fontWeight: "700",
         color: "#988c7b",
         alignItems: "center",
         gap: "6px",

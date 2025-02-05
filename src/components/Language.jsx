@@ -57,7 +57,7 @@ function Language() {
     return (
         <>
             <Menu isLazy>
-                <MenuButton minW={'15px'}>
+                <MenuButton minW={'40px'}>
                     <Image
                         className={"language-image"}
                         src={languageImage}
@@ -92,12 +92,12 @@ const css = {
     },
     image: {
         width: {
-            base: "50px",
+            base: "40px",
             md: "30px",
         },
         borderRadius: "50%",
         height: {
-            base: "50px",
+            base: "40px",
             md: "30px"
         },
         objectFit: "cover",

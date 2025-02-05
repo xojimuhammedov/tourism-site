@@ -37,7 +37,7 @@ const TourPage = () => {
             <Box className='container'>
                 <Heading {...css.name}>{t("The perfect tour")}</Heading>
                 <Heading {...css.title}>{t("All Tours")}</Heading>
-                <Flex mt={'24px'} gap={'18px'} align={'center'}>
+                <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} mt={'24px'} gap={'18px'} align={'center'}>
                     <Heading onClick={() => setTourId(null)} {...css.subname}>All Tours</Heading>
                     {
                         tour?.map((item, index) => (
@@ -177,8 +177,14 @@ const css = {
     },
     subname: {
         fontWeight: "400",
-        fontSize: "22px",
-        lineHeight: "28px",
+        fontSize: {
+            base: "20px",
+            lg: "22px"
+        },
+        lineHeight: {
+            base: "24px",
+            lg: "28px"
+        },
         transition: "0.3s",
         padding: "10px 12px",
         cursor: "pointer",

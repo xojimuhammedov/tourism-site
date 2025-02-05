@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 const ContactPage = () => {
     const { t } = useTranslation()
     return (
-        <Box p={"48px 0"}>
+        <Box p={{ base: "24px 0", lg: "48px 0" }}>
             <Box className='container'>
-                <Flex justifyContent={'space-between'} align={'center'} gap={'36px'}>
+                <Flex flexDirection={{ base: "column", lg: "row" }} justifyContent={'space-between'} align={'center'} gap={'36px'}>
                     <Box>
                         <Heading {...css.title}>{t("Contact Us")}</Heading>
                         <Text {...css.text}>{t("Have questions or need assistance? Feel free to reach out to us. We’re here to help with any inquiries.")} </Text>
@@ -20,7 +20,7 @@ const ContactPage = () => {
                             href={"mailto:info@csrtravel.uz"}>
                             info@csrtravel.uz
                         </Link>
-                        <SimpleGrid gap={'36px'} mt={'60px'} columns={2}>
+                        <SimpleGrid gap={'36px'} mt={'60px'} columns={{ base: 1, lg: 2 }}>
                             <Flex gap={'8px'} flexDirection={'column'}>
                                 <Heading {...css.name}>{t("Customer Support")}</Heading>
                                 <Text {...css.texts}>{t("Contact us for quick and efficient solutions to your issues.")}</Text>
@@ -47,7 +47,7 @@ const ContactPage = () => {
                     </Box>
                 </Flex>
 
-                <Flex pb={'24px'} mt={'60px'} align={'center'} gap={'48px'}>
+                <Flex flexDirection={{ base: "column", lg: "row" }} pb={'24px'} mt={'60px'} align={'center'} gap={'48px'}>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11987.542677550337!2d69.25199355!3d41.311350749999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b685b689e13%3A0xaf4cdf526e02f5e7!2sHilton%20Tashkent%20City!5e0!3m2!1sen!2s!4v1738083417224!5m2!1sen!2s"
                         className='form-map'
@@ -101,7 +101,10 @@ const css = {
         fontSize: "16px",
         lineHeight: "24px",
         marginBottom: "10px",
-        width: "410px"
+        width: {
+            base: "100%",
+            lg: "410px"
+        }
     },
     name: {
         fontSize: "18px",
@@ -118,8 +121,14 @@ const css = {
         borderRadius: "12px",
         boxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 16px 0px",
         background: "#fff",
-        width: "450px",
-        padding: "24px"
+        width: {
+            base: "100%",
+            lg: "450px"
+        },
+        padding: {
+            base: "12px",
+            lg: "24px"
+        }
     },
     button: {
         backgroundColor: "#604132",

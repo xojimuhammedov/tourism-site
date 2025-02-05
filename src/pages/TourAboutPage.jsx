@@ -66,8 +66,8 @@ const TourAboutPage = () => {
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
-                <Flex justify={'space-between'}>
-                    <Box w={'60%'}>
+                <Flex gap={'18px'} flexDirection={{ base: "column", lg: "row" }} justify={'space-between'}>
+                    <Box w={{ base: "100%", lg: '60%' }}>
                         <Image
                             src={`${BASE_URL}/uploads/images/${tour?.sub_tour_images?.[1]?.image_src}`}
                             {...css.image}
@@ -77,7 +77,7 @@ const TourAboutPage = () => {
                             {tour[`text_${i18n?.language}`]}
                         </Text>
                     </Box>
-                    <Box {...css.item} w={'35%'}>
+                    <Box {...css.item} w={{ base: "100%", lg: '35%' }}>
                         <Heading {...css.subname}>{t("Our Tours")}</Heading>
                         {
                             subtour?.map((item, index) => (
@@ -115,7 +115,10 @@ const css = {
     },
     images: {
         borderRadius: "8px",
-        height: "400px",
+        height: {
+            base: "300px",
+            lg: "400px"
+        },
         objectFit: "cover",
         width: "95% !important",
         marginTop: "36px"
