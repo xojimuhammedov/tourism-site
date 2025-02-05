@@ -92,11 +92,14 @@ const css = {
     },
     image: {
         width: {
-            base: "60px",
+            base: "50px",
             md: "30px",
         },
         borderRadius: "50%",
-        height: "30px",
+        height: {
+            base: "50px",
+            md: "30px"
+        },
         objectFit: "cover",
     },
     images: {

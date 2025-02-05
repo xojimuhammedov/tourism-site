@@ -30,25 +30,25 @@ function About() {
                     </Box>
                     <SimpleGrid mb={{ base: "18px", md: 0 }} gap={"18px"} columns={2}>
                         <Image
-                            borderTopLeftRadius="50px"
+                            borderTopLeftRadius={{ base: "12px", lg: "50px" }}
                             {...css.image}
                             src={'http://www.universal-tours.ru/wp-content/uploads/2018/01/5-Medrese-SHer-Dor-na-ploshhadi-Registan.jpg'}
                             alt="AboutImageOne"
                         />
                         <Image
-                            borderTopRightRadius="50px"
+                            borderTopRightRadius={{ base: "12px", lg: "50px" }}
                             {...css.image}
                             src={'https://static.tildacdn.com/tild3635-6534-4563-b934-636465633166/634579f7-979b-4f63-8.jpg'}
                             alt="AboutImageOne"
                         />
                         <Image
-                            borderBottomLeftRadius="50px"
+                            borderBottomLeftRadius={{ base: "12px", lg: "50px" }}
                             {...css.image}
                             src={'https://i.incamp.ru/u/6/877/summer-innovation-camp-armeniy-12956-964-pic-1200x630.jpg'}
                             alt="AboutImageOne"
                         />
                         <Image
-                            borderBottomRightRadius="50px"
+                            borderBottomRightRadius={{ base: "12px", lg: "50px" }}
                             {...css.image}
                             src={'https://img.pac.ru/resorts/213093/422456/big/BA50999F7F0001015388D5174B197A6A.jpg'}
                             alt="AboutImageOne"
@@ -103,7 +103,7 @@ const css = {
             lg: "250px",
         },
         height: {
-            base: "100%",
+            base: "150px",
             lg: "250px",
         },
         objectFit: "cover",

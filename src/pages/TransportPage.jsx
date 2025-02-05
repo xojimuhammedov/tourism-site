@@ -57,15 +57,35 @@ const css = {
         borderRadius: "6px",
         boxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 16px 0px",
         background: "#fff",
-        height: "210px",
-        width: "80%",
+        height: {
+            base: "100%",
+            lg: "210px"
+        },
+        width: {
+            base: "100%",
+            lg: "80%"
+        },
         marginTop: "36px",
         alignItems: "center",
-        margin: "32px auto"
+        margin: "32px auto",
+        flexDirection: {
+            base: "column",
+            lg: "row"
+        },
+        paddingBottom: {
+            base: "16px",
+            lg: "0"
+        }
     },
     image: {
-        borderRadius: "6px 0 0 6px",
-        width: "320px",
+        borderRadius: {
+            base:"6px 6px 0 0",
+            lg:"6px 0 0 6px"
+        },
+        width: {
+            base: "100%",
+            lg: "320px"
+        },
         height: "210px",
         objectFit: "cover"
     },

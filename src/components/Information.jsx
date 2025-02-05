@@ -13,7 +13,10 @@ const Information = () => {
             <Box className='container'>
                 <Heading {...css.name}>{t("The amaing Asia")}</Heading>
                 <Heading {...css.title}>{t("Information about Central Asia")}</Heading>
-                <Flex mt={'36px'} align={'center'} gap={'24px'}>
+                <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} mt={'36px'} align={'center'} gap={{
+                    base: "12px",
+                    lg: '24px'
+                }}>
                     {
                         flagData?.map((item, index) => (
                             <Flex onClick={() => setFlagId(item?.id)} {...css.item} key={index}>
@@ -81,7 +84,10 @@ const css = {
     },
     subname: {
         color: "#2e1f0e",
-        fontSize: "20px",
+        fontSize: {
+            base: "16px",
+            lg: "20px"
+        },
         lineHeight: "26px",
         fontWeight: "600",
     },
@@ -89,13 +95,27 @@ const css = {
         borderRadius: "6px",
         boxShadow: "rgba(0, 0, 0, 0.08) 0px 1px 16px 0px",
         background: "#fff",
-        height: "210px",
+        height: {
+            base: "auto",
+            lg: "210px"
+        },
         width: "100%",
-        marginTop: "36px"
+        marginTop: "36px",
+        flexDirection: {
+            base: "column",
+            lg: "row"
+        },
+        paddingBottom: {
+            base: "16px",
+            lg: "0"
+        }
     },
     image: {
         borderRadius: "6px 0 0 6px",
-        width: "320px",
+        width: {
+            base: "100%",
+            lg: "320px"
+        },
         height: "210px",
         objectFit: "cover"
     },
@@ -117,8 +137,8 @@ const css = {
         color: "#fff",
         height: "40px",
         width: "150px",
-        marginLeft:"15px",
-        marginTop:"12px",
+        marginLeft: "15px",
+        marginTop: "12px",
         fontSize: "16px",
         lineHeight: "24px",
         fontWeight: "500",

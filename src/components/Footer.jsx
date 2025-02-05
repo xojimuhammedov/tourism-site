@@ -26,17 +26,16 @@ function Footer() {
                     spacing={10}>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("INFORMATION")}</Heading>
-
-                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/company"}>
+                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/"}>
                             <Text {...css.link}>{t("About Us")}</Text>
                         </Alink>
-                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/vacancy"}>
+                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/hotels"}>
                             <Text {...css.link}>{t("Hotels")}</Text>
                         </Alink>
-                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/contact"}>
+                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/tours"}>
                             <Text {...css.link}>{t("Tours")}</Text>
                         </Alink>
-                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/tariff"}>
+                        <Alink onClick={() => window.scrollTo(0, 0)} to={"/contact"}>
                             <Text {...css.link}>{t("Contact Us")}</Text>
                         </Alink>
                     </Flex>
@@ -80,7 +79,7 @@ function Footer() {
                             <Link href="/">
                                 <Instagram />
                             </Link>
-                            <Link target="_blank" href="https://t.me/aslgkz">
+                            <Link target="_blank" href="https://t.me/+998977472806">
                                 <Telegram />
                             </Link>
                         </Flex>

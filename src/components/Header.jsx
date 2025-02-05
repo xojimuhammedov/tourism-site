@@ -17,7 +17,10 @@ export default Header;
 const css = {
     image: {
         objectFit: "cover",
-        height: "100%",
+        height: {
+            base:"350px",
+            lg:"100%"
+        },
         width: "100%"
     }
 }
