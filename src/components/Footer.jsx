@@ -76,7 +76,7 @@ function Footer() {
                         <Heading {...css.title}>{t("FOLLOW US ON SOCIAL MEDIA")}</Heading>
                         <Text {...css.link}>{t("Join Us")}</Text>
                         <Flex gap={"12px"}>
-                            <Link href="/">
+                            <Link target="_blank" href="https://www.instagram.com/century_silk_road_travel/">
                                 <Instagram />
                             </Link>
                             <Link target="_blank" href="https://t.me/+998977472806">
