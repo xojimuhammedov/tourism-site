@@ -13,7 +13,7 @@ const Information = () => {
             <Box className='container'>
                 <Heading {...css.name}>{t("The amaing Asia")}</Heading>
                 <Heading {...css.title}>{t("Information about Central Asia")}</Heading>
-                <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} mt={'36px'} align={'center'} gap={{
+                <Flex flexWrap={{ base: "wrap" }} mt={'36px'} align={'center'} gap={{
                     base: "12px",
                     lg: '24px'
                 }}>
@@ -31,9 +31,9 @@ const Information = () => {
                     <Box>
                         <Heading {...css.subnames}>{data[`title_${i18n?.language}`]}</Heading>
                         <Text className='information-text' {...css.text}>{data[`text_${i18n?.language}`]}</Text>
-                        <Link to={'/'}>
+                        {/* <Link to={'/'}>
                             <Text {...css.link}>{t("Batafsil")}</Text>
-                        </Link>
+                        </Link> */}
                     </Box>
                 </Flex>
             </Box>

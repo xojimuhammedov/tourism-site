@@ -2,6 +2,9 @@ import KazakImage from './assets/kazak.png'
 import KrygzImage from './assets/krygz.png'
 import TajikImage from './assets/tajik.png'
 import TurkmanImage from './assets/turkman.png'
+import TurkeyImage from './assets/turkey.webp'
+import GruziyaImage from './assets/gruziya.svg'
+import AzerbayjanImage from './assets/azerbayjan.png'
 
 import CarOneImage from './assets/car-1.jpg'
 import CarTwoImage from './assets/car-2.jpg'
@@ -43,6 +46,30 @@ export const flagData = [
         title_tr: "Türkmenistan",
         icon: TurkmanImage
     },
+    {
+        id: 5,
+        title_uz: "Turkiya",
+        title_ru: "Турция",
+        title_en: "Turkey",
+        title_tr: "Türkiye",
+        icon: TurkeyImage
+    },
+    {
+        id: 6,
+        title_uz: "Gruziya",
+        title_ru: "Грузия",
+        title_en: "Georgia",
+        title_tr: "Gürcistan",
+        icon: GruziyaImage
+    },
+    {
+        id: 7,
+        title_uz: "Ozarbayjon",
+        title_ru: "Азербайджан",
+        title_en: "Azerbaijan",
+        title_tr: "Azerbaycan",
+        icon: AzerbayjanImage
+    }
 ]
 
 
@@ -94,6 +121,42 @@ export const countryData = [
         text_en: "Turkmenistan is a country of deserts and oases, with unique historical and cultural traditions. The most ancient civilizations of the world flourished on its territory. It is one of the richest states in the world with gas and oil reserves. At the same time, the history of the country's independence spans only a few years. Modern Turkmenistan has proclaimed its special development path. Representatives of many nationalities live in Turkmenistan; however, most of the population is Turkmen. Large groups of Turkmen live in Uzbekistan, Afghanistan, and Iran. There are significant communities of Uzbeks (9%) and Kazakhs (2%). A significant portion of the population is Russian and Russian-speaking people (about 7%).",
         text_tr: "Türkmenistan, çöller ve vahalar, kendine özgü tarihi ve kültürel geleneklere sahip bir ülkedir. Dünyanın en eski medeniyetleri topraklarında gelişmiştir. Gaz ve petrol rezervleri ile dünyanın en zengin ülkelerinden biridir. Aynı zamanda, ülkenin bağımsızlık tarihi birkaç yıl ile sınırlıdır. Modern Türkmenistan, özel bir gelişim yolu ilan etmiştir. Türkmenistan’da birçok milliyetin temsilcileri yaşamaktadır; ancak nüfusun çoğunluğunu Türkmenler oluşturur. Türkmenlerin büyük grupları Özbekistan, Afganistan ve İran’da yaşamaktadır. Ülkede önemli bir Özbek (yüzde 9) ve Kazak (yüzde 2) nüfusu bulunmaktadır. Nüfusun büyük bir kısmı Ruslar ve Rusça konuşan insanlardan oluşmaktadır (yaklaşık yüzde 7).",
         icon: TurkmanImage
+    },
+    {
+        id: 5,
+        title_uz: "Turkiya haqida umumiy ma'lumot",
+        title_ru: "Общая информация о Турции",
+        title_en: "General information about Turkey",
+        title_tr: "Türkiye hakkında genel bilgiler",
+        text_uz: "Turkiya – Yevropa va Osiyo qit'alarini bog‘lovchi strategik joylashuvga ega mamlakat. Uning boy tarixi qadimgi imperiyalar – Vizantiya va Usmonli saltanatlari bilan bog‘liq. Hozirda Turkiya kuchli iqtisodiyotga ega bo‘lib, turizm va sanoat tarmoqlari rivojlangan. Turkiya aholisi asosan turklardan iborat, lekin u yerda ko‘plab millatlar ham yashaydi.",
+        text_ru: "Турция — страна, соединяющая Европу и Азию, с богатой историей, связанной с Византийской и Османской империями. Сегодня Турция имеет сильную экономику, развитую туристическую и промышленную отрасли. Большинство населения составляют турки, но здесь проживают и многие другие народы.",
+        text_en: "Turkey is a country that connects Europe and Asia, with a rich history linked to the Byzantine and Ottoman Empires. Today, Turkey has a strong economy with developed tourism and industrial sectors. The majority of the population is Turkish, but many other ethnic groups also live there.",
+        text_tr: "Türkiye, Avrupa ve Asya’yı birbirine bağlayan, Bizans ve Osmanlı İmparatorlukları ile bağlantılı zengin bir tarihe sahip bir ülkedir. Günümüzde Türkiye, gelişmiş turizm ve sanayi sektörlerine sahip güçlü bir ekonomiye sahiptir. Nüfusun çoğunluğu Türklerden oluşmaktadır, ancak birçok farklı etnik grup da burada yaşamaktadır.",
+        icon: TurkeyImage
+    },
+    {
+        id: 6,
+        title_uz: "Gruziya haqida umumiy ma'lumot",
+        title_ru: "Общая информация о Грузии",
+        title_en: "General information about Georgia",
+        title_tr: "Gürcistan hakkında genel bilgiler",
+        text_uz: "Gruziya – Kavkaz tog‘larida joylashgan, boy madaniy va tarixiy merosga ega mamlakat. Uning poytaxti Tbilisi bo‘lib, Gruziya qadimgi sharob ishlab chiqarish an'analari bilan mashhur. Mamlakat aholisi asosan gruzinlardan iborat, lekin arman, osetin va ozarbayjon jamoalari ham mavjud.",
+        text_ru: "Грузия — страна, расположенная в Кавказских горах, с богатым культурным и историческим наследием. Столица — Тбилиси. Грузия известна своими древними традициями виноделия. Большинство населения составляют грузины, но также проживают армяне, осетины и азербайджанцы.",
+        text_en: "Georgia is a country located in the Caucasus Mountains, with a rich cultural and historical heritage. Its capital is Tbilisi. Georgia is famous for its ancient winemaking traditions. The majority of the population is Georgian, but Armenian, Ossetian, and Azerbaijani communities also exist.",
+        text_tr: "Gürcistan, Kafkas Dağları’nda bulunan, zengin kültürel ve tarihi mirasa sahip bir ülkedir. Başkenti Tiflis’tir. Gürcistan, eski şarap yapım gelenekleri ile ünlüdür. Nüfusun çoğunluğu Gürcülerden oluşmaktadır, ancak Ermeni, Oset ve Azerbaycan toplulukları da mevcuttur.",
+        icon: GruziyaImage
+    },
+    {
+        id: 7,
+        title_uz: "Ozarbayjon haqida umumiy ma'lumot",
+        title_ru: "Общая информация об Азербайджане",
+        title_en: "General information about Azerbaijan",
+        title_tr: "Azerbaycan hakkında genel bilgiler",
+        text_uz: "Ozarbayjon – Kaspiy dengizi bo‘yida joylashgan va neft sanoati bilan mashhur mamlakat. Uning poytaxti Boku shahri bo‘lib, zamonaviy arxitektura va qadimiy tarixiy obidalarga ega. Ozarbayjon aholisi asosan ozarbayjonlardan iborat, lekin mamlakatda rus, arman va boshqa millatlar ham yashaydi.",
+        text_ru: "Азербайджан — страна, расположенная на берегу Каспийского моря и известная своей нефтяной промышленностью. Столица — Баку, город с современной архитектурой и древними историческими памятниками. Большинство населения составляют азербайджанцы, но здесь также проживают русские, армяне и другие народы.",
+        text_en: "Azerbaijan is a country located on the shores of the Caspian Sea and is famous for its oil industry. Its capital, Baku, is a city with modern architecture and ancient historical landmarks. The majority of the population is Azerbaijani, but Russian, Armenian, and other ethnic groups also live there.",
+        text_tr: "Azerbaycan, Hazar Denizi kıyısında yer alan ve petrol endüstrisiyle ünlü bir ülkedir. Başkenti Bakü’dür ve modern mimarisi ile tarihi yapıları bir arada barındırır. Nüfusun çoğunluğu Azerbaycanlılardan oluşurken, Rus, Ermeni ve diğer etnik gruplar da burada yaşamaktadır.",
+        icon: AzerbayjanImage
     }
 ]
 
