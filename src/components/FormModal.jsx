@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
 const FormModal = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -66,6 +67,7 @@ const FormModal = () => {
         ).then(
             () => {
                 handleClear();
+                toast.success(t("Xabaringiz muvaffaqiyatli yuborildi!"))
                 onClose()
             },
             (error) => {
