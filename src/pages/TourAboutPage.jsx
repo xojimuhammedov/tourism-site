@@ -1,10 +1,11 @@
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BASE_URL } from '../service';
 import { Link, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
+import FormModal from '../components/FormModal';
 
 var settings = {
     speed: 7000,
@@ -76,6 +77,7 @@ const TourAboutPage = () => {
                         <Text {...css.text}>
                             {tour[`text_${i18n?.language}`]}
                         </Text>
+                        <FormModal />
                     </Box>
                     <Box {...css.item} w={{ base: "100%", lg: '35%' }}>
                         <Heading {...css.subname}>{t("Our Tours")}</Heading>
@@ -183,5 +185,24 @@ const css = {
     bottom: {
         borderBottom: "0.5px solid #2e1f0e",
         margin: "18px 0"
+    },
+    button: {
+        backgroundColor: "#604132",
+        color: "#fff",
+        marginTop: "18px",
+        height: "45px",
+        width: "180px",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: "500",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        transition: "0.3s",
+        borderRadius: "24px",
+
+        _hover: {
+            textDecoration: "none",
+        },
     }
 }
