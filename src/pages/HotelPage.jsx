@@ -14,7 +14,7 @@ const HotelPage = () => {
 
     useEffect(() => {
         axios
-            .get(`${BASE_URL}/hotels`)
+            .get(`${BASE_URL}/hotels?limit=1000`)
             .then((res) => setHotel(res?.data?.data))
             .catch((err) => console.log(err));
     }, []);
