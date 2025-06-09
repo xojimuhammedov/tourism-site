@@ -60,7 +60,7 @@ const TourAboutPage = () => {
 
     useEffect(() => {
         axios
-            .get(`${BASE_URL}/subtours/`)
+            .get(`${BASE_URL}/subtours?limit=1000`)
             .then((res) => setSubtour(res?.data?.data))
             .catch((err) => console.log(err));
     }, []);
