@@ -21,7 +21,7 @@ const DestinationPage = () => {
 
     useEffect(() => {
         axios
-            .get(`${BASE_URL}/prods/`)
+            .get(`${BASE_URL}/prods?limit=1000`)
             .then((res) => {
                 setSubtour(res?.data?.data)
                 setData(res?.data?.data?.filter((item) => item?.cat_id === tourId))
