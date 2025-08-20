@@ -16,11 +16,13 @@ import Information from './components/Information'
 import TransportPage from './pages/TransportPage'
 import DestinationPage from './pages/DestinationPage'
 import DestinationAboutPage from './pages/DestinationAboutPage'
+import Nav from './components/Nav'
 
 function App() {
 
   return (
     <>
+      <Nav />
       <Navbar />
       <Routes>
         <Route path='/' element={<>
@@ -28,13 +30,13 @@ function App() {
           <About />
           <Services />
           <Tours />
-          <Information />
+          {/* <Information /> */}
         </>} />
         <Route path='/gallery' element={<GalleryPage />} />
         <Route path='/hotels' element={<HotelPage />} />
         <Route path='/hotels/about/:id' element={<HotelAboutPage />} />
         <Route path='/contact' element={<ContactPage />} />
-        <Route path='/tours' element={<TourPage />} />
+        <Route path='/tours/:id' element={<TourPage />} />
         <Route path='/tours/about/:id' element={<TourAboutPage />} />
         <Route path='/transport' element={<TransportPage />} />
         <Route path='/destination' element={<DestinationPage />} />

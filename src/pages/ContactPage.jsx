@@ -11,8 +11,8 @@ const ContactPage = () => {
                     <Box>
                         <Heading {...css.title}>{t("Contact Us")}</Heading>
                         <Text {...css.text}>{t("Have questions or need assistance? Feel free to reach out to us. We’re here to help with any inquiries.")} </Text>
-                        <Link {...css.link} target="_blank" href={"tel:+998977472806"}>
-                            +998 97 747 28 06
+                        <Link {...css.link} target="_blank" href={"tel:+998942113377"}>
+                            +998 94 211 33 77
                         </Link>
                         <Link
                             {...css.link}
@@ -49,7 +49,7 @@ const ContactPage = () => {
 
                 <Flex flexDirection={{ base: "column", lg: "row" }} pb={'24px'} mt={'60px'} align={'center'} gap={'48px'}>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11987.542677550337!2d69.25199355!3d41.311350749999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b685b689e13%3A0xaf4cdf526e02f5e7!2sHilton%20Tashkent%20City!5e0!3m2!1sen!2s!4v1738083417224!5m2!1sen!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2998.940198005459!2d69.24599007605354!3d41.2666379713155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDE1JzU5LjkiTiA2OcKwMTQnNTQuOCJF!5e0!3m2!1sen!2s!4v1755496178125!5m2!1sen!2s"
                         className='form-map'
                         allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     <Box>
@@ -57,7 +57,7 @@ const ContactPage = () => {
                         <Heading {...css.title}>{t("Connecting Near and Far")}</Heading>
                         <Text mt={'24px'} {...css.name}>{t("Headquarters")}</Text>
                         <Text mt={'12px'} {...css.texts}>
-                            Uzbekistan, Tashkent, Yakkasaray district Shota Rustaveli street 43
+                        Uzbekistan, Tashkent, Yakkasaray district Boshlik cottage 2nd house
                         </Text>
                     </Box>
                 </Flex>
@@ -67,6 +67,7 @@ const ContactPage = () => {
 }
 
 export default ContactPage;
+
 
 const css = {
     title: {
@@ -80,7 +81,6 @@ const css = {
             lg: "58px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         marginTop: "12px",
     },
     link: {
@@ -152,6 +152,5 @@ const css = {
         fontSize: "22px",
         lineHeight: "28px",
         fontWeight: "500",
-        textTransform: "capitalize",
     }
 }

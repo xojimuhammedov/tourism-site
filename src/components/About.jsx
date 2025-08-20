@@ -84,7 +84,6 @@ const css = {
             base: "100%",
             lg: "680px",
         },
-        textTransform: "capitalize",
     },
     text: {
         fontSize: "16px",

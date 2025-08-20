@@ -1,14 +1,23 @@
 import { Box, Flex, Image, Link, Text } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Link as Alink } from 'react-router-dom'
 
 import LogoIcon from '../assets/logo.jpg'
 import Language from './Language';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
+import { BASE_URL } from '../service';
 
 const Navbar = () => {
-    const { t } = useTranslation()
+    const { t, i18n } = useTranslation()
+    const [countryData, setCountryData] = useState([])
+
+    useEffect(() => {
+        axios.get(`${BASE_URL}/countries`)
+        .then((res) => setCountryData(res?.data?.data))
+        .catch((err) => console.log(err))
+    },[])
     return (
         <Box {...css.navbar}>
             <Box className='container'>
@@ -18,9 +27,23 @@ const Navbar = () => {
                     </Alink>
                     <Flex align={'center'} gap={'36px'}>
                         <Link {...css.link} href='/'>{t("Home")}</Link>
-                        <Alink to='/tours'>
-                            <Text {...css.link}>{t("Tours")}</Text>
-                        </Alink>
+                        <Box className="menu">
+                        <Link {...css.link} href="#">{t("Tours")}</Link>
+                        <Box className="menu-list">
+                            {
+                                countryData?.map((item) => (
+                                    <Alink key={item?.id} to={`/tours/${item?.id}`}>
+                                        <Flex {...css.flex} gap={"6px"} align={'center'}>
+                                            <Image
+                                                src={`${BASE_URL}/uploads/images/${item?.image_src}`}
+                                                {...css.icon}
+                                            />{item[`title_${i18n?.language}`]}
+                                        </Flex>
+                                    </Alink>
+                                ))
+                            }
+                        </Box>
+                        </Box>
                         <Alink to='/destination'>
                             <Text {...css.link}>{t("Destinations")}</Text>
                         </Alink>
@@ -36,8 +59,8 @@ const Navbar = () => {
                         <Alink to='/contact'>
                             <Text {...css.link}>{t("Contact Us")}</Text>
                         </Alink>
-                        <Language />
                     </Flex>
+                    <Language />
                 </Flex>
             </Box>
         </Box>
@@ -48,7 +71,7 @@ export default Navbar;
 
 const css = {
     navbar: {
-        padding: "12px 0"
+        padding: "8px 0"
     },
     image: {
         width: "120px"
@@ -67,5 +90,15 @@ const css = {
         _hover: {
             color: "#604132"
         }
+    },
+    icon:{
+        width:"40px",
+        height:"25px"
+    },
+    flex:{
+        fontSize: "18px",
+        lineHeight: "22px",
+        fontWeight: "500",
+        color: "#2e1f0e",
     }
 }

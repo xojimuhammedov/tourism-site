@@ -39,25 +39,10 @@ function Footer() {
                             <Text {...css.link}>{t("Contact Us")}</Text>
                         </Alink>
                     </Flex>
-                    {/* <Flex flexDirection={"column"}>
-                        <Heading {...css.title}>{t("SERVICES")}</Heading>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Международные грузоперевозки")}</Text>
-                        </Alink>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Складирование и обработка грузов")}</Text>
-                        </Alink>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Таможенное оформление")}</Text>
-                        </Alink>
-                        <Alink to={"/"}>
-                            <Text {...css.link}>{t("Логистический консалтинг")}</Text>
-                        </Alink>
-                    </Flex> */}
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("Contact")}</Heading>
-                        <Link {...css.link} target="_blank" href={"tel:+998977472806"}>
-                            +998 97 747 28 06
+                        <Link {...css.link} target="_blank" href={"tel:+998942113377"}>
+                            +998 94 211 33 77
                         </Link>
                         <Link
                             {...css.link}
@@ -69,7 +54,7 @@ function Footer() {
                             target="_blank"
                             {...css.link}
                             href={"https://maps.app.goo.gl/TArvqgcs41X2c1zQ8"}>
-                           Uzbekistan, Tashkent, Yakkasaray district Shota Rustaveli street 43
+                           Uzbekistan, Tashkent, Yakkasaray district Boshlik cottage 2nd house
                         </Link>
                     </Flex>
                     <Flex flexDirection={"column"}>
@@ -134,9 +119,10 @@ const css = {
         width: "25px",
     },
     image: {
-        width: "220px",
+        width: "180px",
         height: "130px",
         cursor: "pointer",
-        marginBottom: "18px"
+        marginBottom: "18px",
+        objectFit:"contain"
     },
 };

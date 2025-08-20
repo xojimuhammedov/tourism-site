@@ -67,7 +67,6 @@ const css = {
             lg: "45px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         margin: "10px 0",
     },
     text: {

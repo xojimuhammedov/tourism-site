@@ -1,6 +1,6 @@
 {
     "Home": "Home",
-    "Contact Us": "Contact Us",
+    "Contact Us": "Contact",
     "About Us": "About Us",
     "Tours": "Tours",
     "Hotels": "Hotels",
@@ -58,5 +58,7 @@
     "Gallery": "Gallery",
     "Band qilish": "To make busy",
     "Пожалуйста, заполните все поля!":"Please fill in all the fields!",
-    "Xabaringiz muvaffaqiyatli yuborildi!": "Your message has been sent successfully!"
+    "Xabaringiz muvaffaqiyatli yuborildi!": "Your message has been sent successfully!",
+    "Day":"Day",
+    "Yo'nalishlar":"Directions"
 }

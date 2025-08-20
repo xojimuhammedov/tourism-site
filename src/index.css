@@ -35,3 +35,56 @@ a,
 button {
   font-family: 'Inter', sans-serif !important;
 }
+
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu > a {
+  text-decoration: none;
+}
+
+/* dropdown list */
+.menu-list {
+  position: absolute;
+  left: 0;
+  bottom: 0; /* boshlang'ich joylashuv */
+  transform: translateY(100%); /* pastdan chiqish effekt */
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  height: 250px;
+  overflow-y: scroll;
+  z-index: 10;
+  margin-left: -40px;
+}
+
+.menu-list a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-list a:hover {
+  background: #f1f1f1;
+}
+
+/* hover paytida ochiladi */
+.menu:hover .menu-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(104%);
+}
+
+.active-link{
+  background-color: #604132;
+  color:white !important;
+  border-radius: 6px;
+  padding: 4px 8px;
+}

@@ -83,7 +83,6 @@ const css = {
             lg: "45px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         margin: "12px 0"
     },
     subname: {
@@ -97,7 +96,6 @@ const css = {
             lg: "45px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         marginBottom: "18px"
     },
     text: {
@@ -125,7 +123,6 @@ const css = {
             lg: "32px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         cursor: "pointer",
         paddingBottom: "6px"
     },

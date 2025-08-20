@@ -6,6 +6,8 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    Box,
+    Heading,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -78,37 +80,30 @@ const FormModal = () => {
 
     return (
         <>
-            <Button onClick={onOpen} {...css.button}>{t("Band qilish")}</Button>
-            <Modal isCentered isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>{t("Band qilish")}</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>
-                        <input type='name'
-                            value={nameValue}
-                            onChange={(e) => changeName(e.target.value)}
-                            placeholder={t("FirstName")} className='form-input' />
-                        <input type='number'
-                            value={numberValue}
-                            onChange={(e) => changeNumber(e.target.value)}
-                            placeholder={t("Phone Number")} className='form-input' />
-                        <input type='email'
-                            value={emailValue}
-                            onChange={(e) => changeEmail(e.target.value)}
-                            placeholder={t("Email")} className='form-input' />
-                        <textarea
-                            value={textValue}
-                            onChange={(e) => changeText(e.target.value)}
-                            placeholder={t("Message")} className='form-input' />
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button
-                            onClick={sendMessage}
-                            {...css.button} type='submit'>{t("Submit")}</Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
+        <Box>
+            <Heading>{t("Band qilish")}</Heading>
+            <Box>
+                <input type='name'
+                    value={nameValue}
+                    onChange={(e) => changeName(e.target.value)}
+                    placeholder={t("FirstName")} className='form-input' />
+                <input type='number'
+                    value={numberValue}
+                    onChange={(e) => changeNumber(e.target.value)}
+                    placeholder={t("Phone Number")} className='form-input' />
+                <input type='email'
+                    value={emailValue}
+                    onChange={(e) => changeEmail(e.target.value)}
+                    placeholder={t("Email")} className='form-input' />
+                <textarea
+                    value={textValue}
+                    onChange={(e) => changeText(e.target.value)}
+                    placeholder={t("Message")} className='form-input' />
+            </Box>
+                <Button
+                    onClick={sendMessage}
+                    {...css.button} type='submit'>{t("Submit")}</Button>
+        </Box>
         </>
     );
 }

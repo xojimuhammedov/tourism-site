@@ -1,4 +1,8 @@
-import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Image, Text, Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -58,12 +62,24 @@ const TourAboutPage = () => {
             .catch((err) => console.log(err));
     }, [id]);
 
-    useEffect(() => {
-        axios
-            .get(`${BASE_URL}/subtours?limit=1000`)
-            .then((res) => setSubtour(res?.data?.data))
-            .catch((err) => console.log(err));
-    }, []);
+    // useEffect(() => {
+    //     axios
+    //         .get(`${BASE_URL}/subtours?limit=1000`)
+    //         .then((res) => setSubtour(res?.data?.data))
+    //         .catch((err) => console.log(err));
+    // }, []);
+
+    let daysArray = [];
+    
+    if (tour?.days) {
+        try {
+          daysArray = JSON.parse(tour.days);
+        } catch (error) {
+          console.error("JSON parse error:", error);
+          daysArray = [];
+        }
+      }
+
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
@@ -74,13 +90,16 @@ const TourAboutPage = () => {
                             {...css.image}
                         />
                         <Heading {...css.name}>{tour[`name_${i18n?.language}`]}</Heading>
-                        <Text {...css.text}>
-                            {tour[`text_${i18n?.language}`]}
-                        </Text>
-                        <FormModal />
+                        <Text className='subtour-about-text' {...css.text} 
+                        dangerouslySetInnerHTML={{
+                            __html:tour[`text_${i18n?.language}`]
+                        }}
+                        />
+                        {/* <FormModal /> */}
                     </Box>
-                    <Box {...css.item} w={{ base: "100%", lg: '35%' }}>
-                        <Heading {...css.subname}>{t("Our Tours")}</Heading>
+                    <Box {...css.item} w={{ base: "100%", lg: '37%' }}>
+                        <FormModal />
+                        {/* <Heading {...css.subname}>{t("Our Tours")}</Heading>
                         {
                             subtour?.map((item, index) => (
                                 <Link to={`/tours/about/${item?.id}`}>
@@ -89,9 +108,29 @@ const TourAboutPage = () => {
                                     </Box>
                                 </Link>
                             ))
-                        }
+                        } */}
                     </Box>
                 </Flex>
+
+                <Accordion allowToggle {...css.box}>
+                    {
+                        daysArray?.map((item, index) => (
+                        <AccordionItem {...css.items}>
+                            <h2>
+                                <AccordionButton justifyContent={'space-between'}>
+                                    <Box {...css.span} textAlign='left'>
+                                        {t("Day")} {index + 1}
+                                    </Box>
+                                    <AccordionIcon />
+                                </AccordionButton>
+                            </h2>
+                            <AccordionPanel pb={4}>
+                                 {item[`${i18n?.language}`]}
+                            </AccordionPanel>
+                        </AccordionItem>
+                        ))
+                    }
+                </Accordion>
             </Box>
             <Slider {...settings}>
                 {
@@ -136,7 +175,6 @@ const css = {
             lg: "45px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         margin: "12px 0"
     },
     subname: {
@@ -150,13 +188,12 @@ const css = {
             lg: "45px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         marginBottom: "18px"
     },
     text: {
         fontSize: "16px",
         lineHeight: "24px",
-        color: "#988c7b",
+        color: "#333",
         margin: "10px 0",
         width: "100%"
     },
@@ -178,7 +215,6 @@ const css = {
             lg: "32px",
         },
         fontWeight: "600",
-        textTransform: "capitalize",
         cursor: "pointer",
         paddingBottom: "6px"
     },
@@ -204,5 +240,21 @@ const css = {
         _hover: {
             textDecoration: "none",
         },
+    },
+    box:{
+        width:"60%",
+        marginTop:"36px"
+    },
+    span:{
+        backgroundColor: "#f0cc89",
+        color: "#fff",
+        padding:"4px 8px",
+        borderRadius:"6px",
+    },
+    items:{
+        backgroundColor:"#ececec",
+        margin:"10px 0",
+        borderBottom:"none",
+        borderRadius:"6px"
     }
 }

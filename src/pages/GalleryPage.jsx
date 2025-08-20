@@ -46,7 +46,6 @@ const css = {
         lineHeight: "25px",
         fontWeight: "500",
         textAlign: "center",
-        textTransform: "capitalize",
     },
     title: {
         color: "#f0cc89",
@@ -60,7 +59,6 @@ const css = {
         },
         fontWeight: "600",
         textAlign: "center",
-        textTransform: "capitalize",
         marginTop: "12px",
         marginBottom: "36px"
     },

@@ -101,7 +101,6 @@ const css = {
         lineHeight: "28px",
         fontWeight: "500",
         textAlign: "center",
-        textTransform: "capitalize",
     },
     title: {
         color: "#2e1f0e",
@@ -115,7 +114,6 @@ const css = {
         },
         fontWeight: "600",
         textAlign: "center",
-        textTransform: "capitalize",
         marginTop: "12px",
     },
     subname: {
