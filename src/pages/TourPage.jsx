@@ -50,7 +50,7 @@ const TourPage = () => {
                             ))
                         }
                     </Box>
-                    <Box>
+                    <Box w={{base:"100%", lg:"75%"}}>
                         <SimpleGrid
                             gap={"24px"}
                             columns={{ base: 1, sm: 2 }}>
@@ -224,8 +224,12 @@ const css = {
         boxShadow:"0 1px 5px 0 #ededed",
         backgroundColor:"#fff",
         padding:"16px 24px",
-        width:"25%",
+        width:{
+            base:"100%",
+            lg:"25%"
+        },
         borderRadius: "8px",
+        height:"100%"
     },
     names:{
         color: "#2e1f0e",
