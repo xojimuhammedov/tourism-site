@@ -2,6 +2,7 @@ import { Box, Flex, Link } from '@chakra-ui/react';
 import React from 'react';
 import Instagram from '../assets/Instagram';
 import Telegram from '../assets/Telegram';
+import SearchModal from './SearchModal';
 
 const Nav = () => {
     return (
@@ -10,13 +11,14 @@ const Nav = () => {
                 <Flex justifyContent={'flex-end'} gap={'12px'} align={'center'}>
                     <Link {...css.link} target='_blank' href='+998947113377'>+998 94 711 33 77</Link>
                     <Link {...css.link} target='_blank' href={"mailto:info@csrtravel.uz"}>info@csrtravel.uz</Link>
-                    <Flex gap={"12px"}>
+                    <Flex align={'center'} gap={"12px"}>
                         <Link target="_blank" href="https://www.instagram.com/century_silk_road_travel/">
                             <Instagram />
                         </Link>
                         <Link target="_blank" href="https://t.me/+998977472806">
                             <Telegram />
                         </Link>
+                        <SearchModal />
                     </Flex>
                 </Flex>
             </Box>

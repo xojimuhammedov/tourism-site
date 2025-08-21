@@ -114,14 +114,6 @@ const TourPage = () => {
                         </SimpleGrid>
                     </Box>
                 </Flex>
-                {/* <Flex flexWrap={{ base: "wrap", lg: "nowrap" }} mt={'24px'} gap={'18px'} align={'center'}>
-                    <Heading onClick={() => setTourId(null)} {...css.subname}>All Tours</Heading>
-                    {
-                        tour?.map((item, index) => (
-                            <Heading onClick={() => setTourId(item?.id)} key={index} {...css.subname}> {item[`name_${i18n?.language}`]}</Heading>
-                        ))
-                    }
-                </Flex> */}
             </Box>
         </Box>
     );
