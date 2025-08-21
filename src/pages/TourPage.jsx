@@ -38,7 +38,7 @@ const TourPage = () => {
             <Box className='container'>
                 <Heading {...css.name}>{t("The perfect tour")}</Heading>
                 <Heading {...css.title}>{t("All Tours")}</Heading>
-                <Flex mt={'48px'} gap={'36px'}>
+                <Flex flexDirection={{base:"column", lg:"row"}} mt={'48px'} gap={'36px'}>
                     <Box {...css.box}>
                         <Heading {...css.names}>{t("Yo'nalishlar")}</Heading>
                         {

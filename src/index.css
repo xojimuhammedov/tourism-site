@@ -88,3 +88,10 @@ button {
   border-radius: 6px;
   padding: 4px 8px;
 }
+
+
+.country-active{
+  border-radius: 6px;
+  padding: 4px 8px;
+  background-color: #d9e2eb;
+}

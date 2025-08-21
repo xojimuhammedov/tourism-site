@@ -11,49 +11,112 @@ const HotelPage = () => {
     const { t, i18n } = useTranslation()
 
     const [hotel, setHotel] = useState([])
+    const [data, setData] = useState([])
+    const [country, setCountry] = useState([])
+    const [countryId, setCountryId] = useState(null)
+
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/countries/`)
+            .then((res) => setCountry(res?.data?.data))
+            .catch((err) => console.log(err));
+    }, []);
 
     useEffect(() => {
         axios
             .get(`${BASE_URL}/hotels?limit=1000`)
-            .then((res) => setHotel(res?.data?.data))
+            .then((res) => {
+                setHotel(res?.data?.data)
+                setData(res?.data?.data?.filter((item) => item?.country_id === countryId))
+            })
             .catch((err) => console.log(err));
-    }, []);
+    }, [countryId]);
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
                 <Heading {...css.name}>{t("The perfect hotels")}</Heading>
                 <Heading {...css.title}>{t("Hotels in Uzbekistan & Central Asia")}</Heading>
-                <SimpleGrid mt={"48px"}
-                    gap={"24px"}
-                    columns={{ base: 1, sm: 2, lg: 3 }}>
-                    {
-                        hotel?.map((item, index) => (
-                            <Box key={index} {...css.item}>
-                                <Image
-                                    src={`${BASE_URL}/uploads/images/${item?.hotel_images[0]?.image_src}`}
-                                    {...css.image}
-                                />
-                                <Heading {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
-                                <Text className='service-text' {...css.text}> {item[`text_${i18n?.language}`]}</Text>
+                <Flex flexDirection={{base:"column", lg:"row"}} mt={'36px'} gap={'36px'}>
+                    <Box {...css.box}>
+                        <Heading {...css.names}>{t("Yo'nalishlar")}</Heading>
+                        {
+                            country?.map((item) => (
                                 <Flex
-                                    {...css.flex}
-                                >
-                                    <Image {...css.icon} src={LocationIcon} /> {item?.address}
-                                </Flex>
-                                <hr />
-                                <Link
-                                    onClick={() => window.scrollTo(0, 0)}
-                                    to={`/hotels/about/${item?.id}`}>
-                                    <Button {...css.button}>{t("Details")}</Button>
-                                </Link>
-                                {/* <Flex align={'center'} justify={'space-between'}>
-                                    <Heading {...css.subname}>832$</Heading>
-                                    <Text {...css.text}>per night</Text>
-                                </Flex> */}
-                            </Box>
-                        ))
-                    }
-                </SimpleGrid>
+                                    align={'center'}
+                                    gap={'4px'} 
+                                    onClick={() => setCountryId(item?.id)}
+                                    className={`${item?.id === countryId ? 'country-active' :""}`}
+                                    {...css.link} key={item?.id}>
+                                        <Image
+                                            src={`${BASE_URL}/uploads/images/${item?.image_src}`}
+                                            {...css.icons}
+                                        />
+                                    {item[`title_${i18n?.language}`]}</Flex>
+                            ))
+                        }
+                    </Box>
+                    <Box w={'75%'}>
+                        <SimpleGrid
+                            gap={"24px"}
+                            columns={{ base: 1, sm: 2 }}>
+                            {
+                                countryId ? (
+                                    <>
+                                        {
+                                            data?.map((item, index) => (
+                                                <Box key={index} {...css.item}>
+                                                    <Image
+                                                        src={`${BASE_URL}/uploads/images/${item?.hotel_images[0]?.image_src}`}
+                                                        {...css.image}
+                                                    />
+                                                    <Heading {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
+                                                    <Text className='service-text' {...css.text}> {item[`text_${i18n?.language}`]}</Text>
+                                                    <Flex
+                                                        {...css.flex}
+                                                    >
+                                                        <Image {...css.icon} src={LocationIcon} /> {item?.address}
+                                                    </Flex>
+                                                    <hr />
+                                                    <Link
+                                                        onClick={() => window.scrollTo(0, 0)}
+                                                        to={`/hotels/about/${item?.id}`}>
+                                                        <Button {...css.button}>{t("Details")}</Button>
+                                                    </Link>
+                                                </Box>
+                                            ))
+                                        }
+                                    </>
+                                ) : (
+                                    <>
+                                        {
+                                            hotel?.map((item, index) => (
+                                                <Box key={index} {...css.item}>
+                                                    <Image
+                                                        src={`${BASE_URL}/uploads/images/${item?.hotel_images[0]?.image_src}`}
+                                                        {...css.image}
+                                                    />
+                                                    <Heading {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
+                                                    <Text className='service-text' {...css.text}> {item[`text_${i18n?.language}`]}</Text>
+                                                    <Flex
+                                                        {...css.flex}
+                                                    >
+                                                        <Image {...css.icon} src={LocationIcon} /> {item?.address}
+                                                    </Flex>
+                                                    <hr />
+                                                    <Link
+                                                        onClick={() => window.scrollTo(0, 0)}
+                                                        to={`/hotels/about/${item?.id}`}>
+                                                        <Button {...css.button}>{t("Details")}</Button>
+                                                    </Link>
+                                                </Box>
+                                            ))
+                                        }
+                                    </>
+                                )
+                            }
+                        </SimpleGrid>
+                    </Box>
+                </Flex>
             </Box>
         </Box>
     );
@@ -141,4 +204,37 @@ const css = {
             backgroundColor: "#2e1f0e",
         },
     },
+    box:{
+        boxShadow:"0 1px 5px 0 #ededed",
+        backgroundColor:"#fff",
+        padding:"16px 24px",
+        width:"25%",
+        borderRadius: "8px",
+        height:"100%"
+    },
+    names:{
+        color: "#2e1f0e",
+        fontSize: {
+            base: "25px"
+        },
+        lineHeight: {
+            base: "40px",
+        },
+        fontWeight: "500",
+    },
+    link:{
+        color: "#2e1f0e",
+        fontSize: {
+            base: "18px"
+        },
+        lineHeight: "30px",
+        fontWeight: "500",
+        margin:"4px 8px",
+        cursor:"pointer",
+        padding:"4px 8px"
+    },
+    icons:{
+        width:"30px",
+        height:"20px"
+    }
 }
