@@ -91,8 +91,14 @@ const css = {
         backgroundColor: "#f0cc89",
         color: "#fff",
         marginTop: "18px",
-        height: "55px",
-        width: "180px",
+        height:{
+            base:"45px",
+            lg: "55px"
+        },
+        width: {
+            base:"150px",
+            lg:"180px"
+        },
         fontSize: "18px",
         lineHeight: "26px",
         fontWeight: "600",

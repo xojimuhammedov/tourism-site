@@ -8,6 +8,7 @@ import Language from './Language';
 import { useTranslation } from 'react-i18next';
 import axios from 'axios';
 import { BASE_URL } from '../service';
+import NavbarMenu from './NavbarMenu';
 
 const Navbar = () => {
     const { t, i18n } = useTranslation()
@@ -61,6 +62,7 @@ const Navbar = () => {
                         </Alink>
                     </Flex>
                     <Language />
+                    <NavbarMenu />
                 </Flex>
             </Box>
         </Box>
