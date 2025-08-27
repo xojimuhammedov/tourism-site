@@ -34,9 +34,11 @@ const HotelAboutPage = () => {
                         >
                             <Image {...css.icon} src={LocationIcon} /> {hotel?.address}
                         </Flex>
-                        <Text {...css.text}>
-                            {hotel[`text_${i18n?.language}`]}
-                        </Text>
+                        <Text {...css.text} 
+                        dangerouslySetInnerHTML={{
+                            __html: hotel[`text_${i18n?.language}`]
+                        }}
+                        />
                     </Box>
                 </Flex>
             </Box>
@@ -72,7 +74,7 @@ const css = {
     text: {
         fontSize: "16px",
         lineHeight: "24px",
-        color: "#988c7b",
+        color: "#333",
         width: "100%",
     },
     flex: {

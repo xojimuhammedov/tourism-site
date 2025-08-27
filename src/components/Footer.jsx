@@ -13,16 +13,25 @@ import Telegram from "../assets/Telegram";
 import Instagram from "../assets/Instagram";
 
 import LogoIcon from '../assets/logo.png'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../service";
 
 function Footer() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [countryData, setCountryData] = useState([])
+    useEffect(() => {
+        axios.get(`${BASE_URL}/countries`)
+        .then((res) => setCountryData(res?.data?.data))
+        .catch((err) => console.log(err))
+    },[])
     return (
         <Box {...css.footer}>
             <Box className="container">
                 <Image {...css.image} src={LogoIcon} alt="Logo" />
                 <SimpleGrid
                     {...css.box}
-                    columns={{ base: 1, sm: 2, md: 3, lg: 3 }}
+                    columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
                     spacing={10}>
                     <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("INFORMATION")}</Heading>
@@ -40,9 +49,19 @@ function Footer() {
                         </Alink>
                     </Flex>
                     <Flex flexDirection={"column"}>
+                        <Heading {...css.title}>{t("Qaynoq Turlar")}</Heading>
+                        {
+                            countryData?.map((item) => (
+                                <Alink onClick={() => window.scrollTo(0, 0)} to={`/tours/${item?.id}`}>
+                                    <Text {...css.link}>{item[`title_${i18n?.language}`]}</Text>
+                                </Alink>
+                            ))
+                        }
+                    </Flex>
+                    <Flex flexDirection={"column"}>
                         <Heading {...css.title}>{t("Contact")}</Heading>
-                        <Link {...css.link} target="_blank" href={"tel:+998942113377"}>
-                            +998 94 211 33 77
+                        <Link {...css.link} target="_blank" href={"tel:+998947113377"}>
+                            +998 94 711 33 77
                         </Link>
                         <Link
                             {...css.link}

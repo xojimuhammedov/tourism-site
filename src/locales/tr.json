@@ -5,7 +5,7 @@
     "Tours": "Turlar",
     "Hotels": "Oteller",
     "We're the top adventure travel company": "Biz en iyi macera seyahat şirketiyiz",
-    "Contact with you": "Sizinle iletişim",
+    "Contact with you": "Bizimle iletişime geçin",
     "about_text": "Büyüleyici anlarla dolu romantik bir kaçamak mı arıyorsunuz, unutulmaz anılarla dolu heyecan verici bir aile tatili mi planlıyorsunuz, yoksa dünyanın harikalarını keşfetmek için yalnız bir yolculuğa mı çıkıyorsunuz? Güvenilir bir seyahat acentesi, hayallerinizi gerçekleştirmek için gerekli deneyim ve kaynaklara sahiptir!",
     "Services": "Hizmetler",
     "Our Services": "Hizmetlerimiz",
@@ -63,5 +63,7 @@
     "Yo'nalishlar":"Yönler",
     "Search tour":"Tur ara",
     "Type to search...":"Aramak için yazın...",
-    "Unutilmas Sayohatlar":"Unutulmaz Yolculuklar"
+    "Unutilmas Sayohatlar":"Unutulmaz Yolculuklar",
+    "Ommabop yo’nalishlar": "Popüler Rotalar",
+    "Qaynoq Turlar": "Yanan Turlar"
 }

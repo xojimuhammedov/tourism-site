@@ -24,7 +24,7 @@ function About() {
                         <Text {...css.text}>
                             {t("about_text")}
                         </Text>
-                        <Link href="tel:+998977472806" target="_blank" {...css.button}>
+                        <Link href="tel:+998947113377" target="_blank" {...css.button}>
                             {t("Contact with you")}
                         </Link>
                     </Box>

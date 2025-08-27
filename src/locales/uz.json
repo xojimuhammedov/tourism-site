@@ -5,7 +5,7 @@
     "Tours": "Turlar",
     "Hotels": "Mehmonxonalar",
     "We're the top adventure travel company": "Biz eng yaxshi sarguzasht sayohat kompaniyasimiz",
-    "Contact with you": "Siz bilan bog‘lanish",
+    "Contact with you": "Biz bilan bog'laning",
     "about_text": "Sehrli lahzalarga boy romantik sayohatni xohlaysizmi, oilaviy unutilmas sarguzasht rejalashtiryapsizmi yoki dunyo mo‘jizalarini kashf etish uchun yolg‘iz safarga chiqmoqchimisiz – ishonchli sayyohlik agentligi sizning orzuingizni amalga oshirish uchun barcha tajriba va resurslarga ega!",
     "Services": "Xizmatlar",
     "Our Services": "Bizning xizmatlarimiz",
@@ -63,5 +63,7 @@
     "Yo'nalishlar":"Yo'nalishlar",
     "Search tour":"Tur qidirish",
     "Type to search...":"Qidirish uchun yozing...",
-    "Unutilmas Sayohatlar":"Unutilmas Sayohatlar"
+    "Unutilmas Sayohatlar":"Unutilmas Sayohatlar",
+    "Qaynoq Turlar":"Qaynoq Turlar",
+    "Ommabop yo’nalishlar":"Ommabop yo’nalishlar"
 }

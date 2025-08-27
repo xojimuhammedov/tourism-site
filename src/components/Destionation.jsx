@@ -5,7 +5,7 @@ import axios from 'axios';
 import { BASE_URL } from '../service';
 import { Link } from 'react-router-dom';
 
-const DestinationPage = () => {
+const HomeDestionation = () => {
     const { t, i18n } = useTranslation()
     const [tour, setTour] = useState([])
     const [subtour, setSubtour] = useState([])
@@ -14,7 +14,7 @@ const DestinationPage = () => {
 
     useEffect(() => {
         axios
-            .get(`${BASE_URL}/cats/`)
+            .get(`${BASE_URL}/countries/`)
             .then((res) => setTour(res?.data?.data))
             .catch((err) => console.log(err));
     }, []);
@@ -23,8 +23,8 @@ const DestinationPage = () => {
         axios
             .get(`${BASE_URL}/prods?limit=1000`)
             .then((res) => {
-                setSubtour(res?.data?.data)
-                setData(res?.data?.data?.filter((item) => item?.cat_id === tourId))
+                setSubtour(res?.data?.data?.slice(0, 12))
+                setData(res?.data?.data?.filter((item) => item?.cat_id === tourId)?.slice(0, 12))
             })
             .catch((err) => console.log(err));
     }, [tourId]);
@@ -33,13 +33,13 @@ const DestinationPage = () => {
             <Box className='container'>
                 <Heading {...css.name}>{t("The beautiful destinations")}</Heading>
                 <Heading {...css.title}>{t("Ommabop yo’nalishlar")}</Heading>
-                <Flex flexWrap={'wrap'} mt={'24px'} gap={'18px'} align={'center'}>
+                <SimpleGrid columns={{base:3, lg:10}} flexWrap={'wrap'} mt={'24px'} gap={'12px'} align={'center'}>
                     {
                         tour?.map((item, index) => (
-                            <Heading onClick={() => setTourId(item?.id)} key={index} {...css.subname}> {item[`name_${i18n?.language}`]}</Heading>
+                            <Heading onClick={() => setTourId(item?.id)} key={index} {...css.subname}> {item[`title_${i18n?.language}`]}</Heading>
                         ))
                     }
-                </Flex>
+                </SimpleGrid>
                 <SimpleGrid mt={"48px"}
                     gap={"24px"}
                     columns={{ base: 1, sm: 2, lg: 3 }}>
@@ -92,7 +92,7 @@ const DestinationPage = () => {
     );
 }
 
-export default DestinationPage;
+export default HomeDestionation;
 
 const css = {
     name: {
@@ -105,12 +105,12 @@ const css = {
     title: {
         color: "#2e1f0e",
         fontSize: {
-            base: "32px",
-            lg: "42px",
+            base: "30px",
+            sm: "55px",
         },
         lineHeight: {
             base: "40px",
-            lg: "58px",
+            sm: "60px",
         },
         fontWeight: "600",
         textAlign: "center",
@@ -118,10 +118,13 @@ const css = {
     },
     subname: {
         fontWeight: "400",
-        fontSize: "22px",
-        lineHeight: "28px",
+        fontSize: {
+            base:"16px",
+            lg:"18px"
+        },
+        lineHeight: "24px",
         transition: "0.3s",
-        padding: "10px 12px",
+        padding: "10px 8px",
         cursor: "pointer",
         border: "1px solid white",
 

@@ -53,6 +53,7 @@ function Services() {
                     {t("Our Services")}
                 </Heading>
             </Box>
+            <Box className="container-mix">
             <Slider {...settings}>
                 <Box>
                     <Image {...css.image} src={'https://media.baamboozle.com/uploads/images/166561/1619153331_166766.webp'} />
@@ -90,6 +91,7 @@ function Services() {
                     </Box>
                 </Box>
             </Slider>
+            </Box>
         </Box>
     );
 }
@@ -114,7 +116,7 @@ const css = {
     title: {
         fontSize: {
             base: "30px",
-            sm: "50px",
+            sm: "55px",
         },
         lineHeight: {
             base: "40px",

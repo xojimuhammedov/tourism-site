@@ -70,7 +70,11 @@ const HotelPage = () => {
                                                         {...css.image}
                                                     />
                                                     <Heading {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
-                                                    <Text className='service-text' {...css.text}> {item[`text_${i18n?.language}`]}</Text>
+                                                    <Text className='service-text' {...css.text}
+                                                      dangerouslySetInnerHTML={{
+                                                        __html: item[`text_${i18n?.language}`]
+                                                    }}
+                                                    /> 
                                                     <Flex
                                                         {...css.flex}
                                                     >
@@ -96,7 +100,11 @@ const HotelPage = () => {
                                                         {...css.image}
                                                     />
                                                     <Heading {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
-                                                    <Text className='service-text' {...css.text}> {item[`text_${i18n?.language}`]}</Text>
+                                                    <Text className='service-text' {...css.text}
+                                                      dangerouslySetInnerHTML={{
+                                                        __html: item[`text_${i18n?.language}`]
+                                                    }}
+                                                    /> 
                                                     <Flex
                                                         {...css.flex}
                                                     >

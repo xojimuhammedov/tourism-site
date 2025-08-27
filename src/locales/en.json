@@ -1,11 +1,11 @@
 {
     "Home": "Home",
     "Contact Us": "Contact",
-    "About Us": "About Us",
+    "About Us": "About us",
     "Tours": "Tours",
     "Hotels": "Hotels",
     "We're the top adventure travel company": "We're the top adventure travel company",
-    "Contact with you": "Contact with you",
+    "Contact with you": "Contact with us",
     "about_text": "Whether you're yearning for a romantic escape filled with enchanting moments, planning an exciting family-friendly adventure packed with cherished memories, or embarking on a thrilling solo journey to explore the world's wonders, a reputable travel agency possesses the expertise and resources to meticulously curate a custom-tailored itinerary that not only fulfills but far exceeds your wildest dreams and expectations.",
     "Services": "Services",
     "Our Services": "Our Services",
@@ -63,5 +63,7 @@
     "Yo'nalishlar":"Directions",
     "Search tour":"Search tour",
     "Type to search...":"Type to search...",
-    "Unutilmas Sayohatlar":"Tours Around The World"
+    "Unutilmas Sayohatlar":"Tours Around The World",
+    "Qaynoq Turlar": "Trending Tours",
+    "Ommabop yo’nalishlar": "Popular Destinations"
 }
