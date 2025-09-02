@@ -9,7 +9,7 @@ const AboutPage = () => {
     return (
         <Box p={'48px 0'}>
             <Box className='container'>
-                <Heading {...css.name}>{t(" More Information about Uzbekistan")}</Heading>
+                <Heading {...css.name}>{t("More Information about Uzbekistan")}</Heading>
                 <SimpleGrid mt={'48px'} columns={{base:1, lg:3}} gap={'24px'}>
                     {
                         aboutData?.map((item) => (

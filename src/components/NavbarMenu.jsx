@@ -45,21 +45,23 @@ function NavbarMenu() {
               <Alink onClick={onClose} to="/">
                 <Text {...css.link}>{t("Home")}</Text>
               </Alink>
+              <Alink onClick={onClose} to='/about'>
+                  <Text {...css.link}>{t("About Us")}</Text>
+              </Alink>
               <Menu isLazy>
-                                <MenuButtonTwo {...css.link}>{t("Tours")}</MenuButtonTwo>
-                                <MenuList>
-                                    {
-                                        countryData?.map((item) => (
-                                            <MenuItem gap={'8px'} onClick={() => { navigate(`/tours/${item?.id}`); onClose() }} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>
-                                                <Image
-                                                src={`${BASE_URL}/uploads/images/${item?.image_src}`}
-                                                {...css.icon}
-                                            />
-                                                {item[`title_${i18n?.language}`]}</MenuItem>
-                                        ))
-                                    }
-                                </MenuList>
-                            </Menu>
+                  <MenuButtonTwo {...css.link}>{t("Tours")}</MenuButtonTwo>
+                  <MenuList>
+                      {
+                        countryData?.map((item) => (
+                            <MenuItem gap={'8px'} onClick={() => { navigate(`/tours/${item?.id}`); onClose() }} fontSize={'14px'} color={'rgba(0, 0, 0, 1)'} fontWeight={'600'}>
+                                <Image
+                                src={`${BASE_URL}/uploads/images/${item?.image_src}`}
+                                {...css.icon}
+                            />{item[`title_${i18n?.language}`]}</MenuItem>
+                        ))
+                      }
+                  </MenuList>
+              </Menu>
               <Alink onClick={onClose} to="/destination">
                 <Text {...css.link}>{t("Destinations")}</Text>
               </Alink>

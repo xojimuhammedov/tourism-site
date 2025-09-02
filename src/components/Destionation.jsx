@@ -33,7 +33,7 @@ const HomeDestionation = () => {
             <Box className='container'>
                 <Heading {...css.name}>{t("The beautiful destinations")}</Heading>
                 <Heading {...css.title}>{t("Ommabop yo’nalishlar")}</Heading>
-                <SimpleGrid columns={{base:3, lg:10}} flexWrap={'wrap'} mt={'24px'} gap={'12px'} align={'center'}>
+                <SimpleGrid columns={{base:3, lg:8}} flexWrap={'wrap'} mt={'24px'} gap={'12px'} align={'center'}>
                     {
                         tour?.map((item, index) => (
                             <Heading onClick={() => setTourId(item?.id)} key={index} {...css.subname}> {item[`title_${i18n?.language}`]}</Heading>

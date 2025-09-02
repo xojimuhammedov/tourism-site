@@ -12,7 +12,7 @@ const AboutInformationPage = () => {
     return (
         <Box p={'24px 0'}>
             <Box className='container'>
-                <Box w={'60%'}>
+                <Box w={{base: '100%', lg: '60%'}}>
                     <Image src={about?.image} {...css.image} />
                     <Heading {...css.name}>{about[`title_${i18n?.language}`]}</Heading>
                     <Text {...css.text} 
