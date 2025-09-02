@@ -36,7 +36,10 @@ export default AboutPage;
 const css = {
     name: {
         color: "#f0cc89",
-        fontSize: "45px",
+        fontSize: {
+            base:"35px",
+            lg:"45px"
+        },
         fontWeight: "600",
         lineHeight: "normal",
         textAlign: "center",
