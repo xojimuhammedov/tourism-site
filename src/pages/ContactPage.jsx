@@ -14,6 +14,9 @@ const ContactPage = () => {
                         <Link {...css.link} target="_blank" href={"tel:+998947113377"}>
                             +998 94 711 33 77
                         </Link>
+                        <Link {...css.link} target="_blank" href={"tel:+998942113377"}>
+                            +998 94 211 33 77
+                        </Link>
                         <Link
                             {...css.link}
                             target="_blank"

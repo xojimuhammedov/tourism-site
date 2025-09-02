@@ -54,8 +54,11 @@ const Navbar = () => {
                     <Alink to={'/'}>
                         <Image {...css.image} src={LogoIcon} />
                     </Alink>
-                    <Flex {...css.navLinks} align={'center'} gap={'36px'}>
+                    <Flex {...css.navLinks} align={'center'} gap={'30px'}>
                         <Link {...css.link} href='/'>{t("Home")}</Link>
+                        <Alink to='/about'>
+                            <Text {...css.link}>{t("About")}</Text>
+                        </Alink>
                         <Box className="menu">
                             <Link {...css.link} href="#">{t("Tours")}</Link>
                             <Box className="menu-list">

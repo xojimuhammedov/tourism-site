@@ -13,6 +13,12 @@ import CarFourImage from './assets/car-4.jpg'
 import CarFiveImage from './assets/car-5.jpg'
 import CarSixImage from './assets/car-6.jpg'
 
+import AboutOneImage from './assets/about1.jpg'
+import AboutTwoImage from './assets/about-2.jpg'
+import AboutThreeImage from './assets/about3.jpg'
+import AboutFourImage from './assets/about4.jpg'
+import AboutFiveImage from './assets/about5.jpg'
+
 export const flagData = [
     {
         id: 1,
@@ -160,44 +166,6 @@ export const countryData = [
     }
 ]
 
-// export const carData = [
-//     {
-//         id: 1,
-//         title: "Railway Station - Samarkand City Transfer",
-//         text: "Convenient and economical means of transportation with A/C between cities. You don't need to look for taxi drivers or other means of transports. Just tell us your location and your driver will be there at the specified time.",
-//         image: CarOneImage
-//     },
-//     {
-//         id: 2,
-//         title: "Private Intercity Transfer Tashkent",
-//         text: "This is a one-way trip, we pick up all travelers from hotels, located in Tashkent and drop them off at hotels, airports & train stations in Samarkand or vice versa. Please confirm when we pick you up from the hotels and where we drop you off.",
-//         image: CarTwoImage
-//     },
-//     {
-//         id: 3,
-//         title: "Tashkent - Samarkand transfer by Minivan up to 4 people",
-//         text: "Our experienced driver with the air conditioned minivan will pick you up from any location within Tashkent city and drive you to Samarkand city and drop you off at any location. On the road you can stop to get some food, drinks and go to restroom.",
-//         image: CarThreeImage
-//     },
-//     {
-//         id: 4,
-//         title: "Safe Private Transfer in Tashkent Uzbekistan",
-//         text: "We offer drivers who are proficient in English and Russian, as well as tour operators who speak English, Russian, and Spanish, ensuring smooth communication. Our services also include punctual pick-up and drop-off, guaranteeing a reliable and efficient experience.",
-//         image: CarFourImage
-//     },
-// {
-//     id: 5,
-//     title: "Tashkent Airport (TAS) Private Transfer to Tashkent City/Hotels",
-//     text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
-//     image: CarFiveImage
-// },
-// {
-//     id: 6,
-//     title: "Tashkent Airport (TAS) to Tashkent - Arrival Private Transfer",
-//     text: "Reliable and convenient transportation to and from the Pickup location. Our professional drivers ensure a smooth journey, providing a stress-free experience for travelers. On-time pickups and drop-offs, comfortable vehicles, and excellent customer service make our airport transfer service the perfect choice for your travel needs. Available 24/7.",
-//     image: CarSixImage
-// }
-// ]
 
 export const carData = [
     {
@@ -273,3 +241,54 @@ export const carData = [
         image: CarSixImage
     }
 ];
+
+export const aboutData = [
+    {
+        id:1,
+        title_en:"The Great Silk Road",
+        title_ru:"Великий шёлковый путь",
+        title_uz:"G'ozallik yo'li",
+        title_tr:"Güzelşehir yolu",
+        text_en:"During the XV - XVI centuries there existed thousands of towns and roads that crossed the Asian continent and led to the West. Caravans passed by those roads, and each of the caravans was filled with exotic clothes, oriental goods and spices. Towns and cities, caravanserais gradually grown on those roads. Numerous centres of national crafts, art schools, madrasahs, palaces and mausoleums were created there. <br /> Merchants, missionaries and pilgrims travelled and brought to region new religions, customs, the goods (glass, porcelain, soap, gunpowder) and different cultures. For centuries, the Great Silk Road has united countries by such peaceful acts as trading, exchange of cultural and spiritual values that are unique for the whole mankind. <br /> A special long-term program, which includes proposals for the revival of historical heritage, was created in cooperation with UNESCO. In 1994 the Declaration 'On the revival of the Great Silk Road'  was accepted in Samarkand. <br /> The main tourist road is crossed with 32 towns and cities of Central Asia. Gems of the Silk Road are Tashkent, Samarkand, Bukhara, Khiva and cities in Fergana Valley. ",
+        text_ru:"В XV - XVI веках существовали тысячи городов и дорог, которые пересекали азиатский континент и вели на Запад. По этим дорогам проходили караваны, и каждый из караванов был наполнен экзотической одеждой, восточными товарами и специями. На этих дорогах постепенно росли города и караван-сараи. Там были созданы многочисленные центры народных ремесел, художественные школы, медресе, дворцы и мавзолеи. <br /> Купцы, миссионеры и паломники путешествовали и приносили в регион новые религии, обычаи, товары (стекло, фарфор, мыло, порох) и различные культуры. На протяжении веков Великий Шелковый путь объединял страны такими мирными актами, как торговля, обмен культурными и духовными ценностями, которые уникальны для всего человечества. <br /> В сотрудничестве с ЮНЕСКО была создана специальная долгосрочная программа, которая включает предложения по возрождению исторического наследия. В 1994 году в Самарканде была принята Декларация 'О возрождении Великого Шелкового пути'. <br /> Основная туристическая дорога пересекается с 32 городами Центральной Азии. Жемчужинами Шелкового пути являются Ташкент, Самарканд, Бухара, Хива и города Ферганской долины.",
+        text_uz:"XV - XVI asrlarda Osiyo qit'asini kesib o'tgan va G'arbga olib boruvchi minglab shaharlar va yo'llar mavjud edi. Bu yo'llar bo'ylab karvonlar o'tgan va har bir karvon ekzotik kiyimlar, sharqiy tovarlar va ziravorlar bilan to'ldirilgan edi. Bu yo'llar bo'ylab shaharlar va karvonsaroylar asta-sekin o'sib bordi. U yerda ko'plab milliy hunarmandchilik markazlari, san'at maktablari, madrasalar, saroylar va maqbaralar yaratilgan. <br /> Savdogarlar, missionerlar va ziyoratchilar sayohat qilib, mintaqaga yangi dinlar, urf-odatlar, tovarlar (shisha, chinni, sovun, porox) va turli madaniyatlarni olib kelishgan. Asrlar davomida Buyuk Ipak yo'li mamlakatlarni savdo, butun insoniyat uchun noyob bo'lgan madaniy va ma'naviy qadriyatlarni almashish kabi tinch harakatlar bilan birlashtirgan. <br /> UNESCO bilan hamkorlikda tarixiy merosni qayta tiklash bo'yicha takliflar o'z ichiga olgan maxsus uzoq muddatli dastur yaratilgan. 1994 yilda Samarqandda 'Buyuk Ipak yo'lini qayta tiklash to'g'risida' Deklaratsiya qabul qilingan. <br /> Asosiy sayyohlik yo'li Markaziy Osiyoning 32 ta shahri bilan kesishadi. Ipak yo'lining marvaridlari - Toshkent, Samarqand, Buxoro, Xiva va Farg'ona vodiysidagi shaharlardir.",
+        text_tr:"XV - XVI yüzyıllar boyunca Asya kıtasını geçen ve Batı'ya giden binlerce şehir ve yol vardı. Bu yollar boyunca kervanlar geçiyordu ve her kervan egzotik kıyafetler, doğu malları ve baharatlarla doluydu. Bu yollar boyunca şehirler ve kervansaraylar yavaş yavaş büyüdü. Orada sayısız ulusal zanaat merkezi, sanat okulları, medreseler, saraylar ve türbeler yaratıldı. <br /> Tüccarlar, misyonerler ve hacılar seyahat ederek bölgeye yeni dinler, gelenekler, mallar (cam, porselen, sabun, barut) ve farklı kültürler getirdiler. Yüzyıllar boyunca Büyük İpek Yolu, ticaret, tüm insanlık için benzersiz olan kültürel ve manevi değerlerin değişimi gibi barışçıl eylemlerle ülkeleri birleştirdi. <br /> UNESCO ile işbirliği içinde tarihi mirasın canlandırılması için önerileri içeren özel uzun vadeli bir program oluşturuldu. 1994 yılında Semerkant'ta 'Büyük İpek Yolu'nun Canlandırılması' Deklarasyonu kabul edildi. <br /> Ana turist yolu Orta Asya'nın 32 şehri ile kesişir. İpek Yolu'nun incileri Taşkent, Semerkant, Buhara, Hive ve Fergana Vadisi'ndeki şehirlerdir.",
+        image:AboutOneImage
+    },
+    {
+        id:2,
+        title_en:"Uzbek traditions",
+        title_ru:"История Узбекистана",
+        title_uz:"O'zbekiston tarixi",
+        title_tr:"Özbek gelenekleri",
+        text_en:"The main features of Uzbek families are hospitality and traditionally deference respect to the elders. Usually the Uzbeks live by big families, consisting of several generations, that is why the big houses on the ground are in preference. <br /> The tea ceremony, as the element of hospitality, plays the significant role in everyday life. And it is the exceptional prerogative of the owner to make tea and pour it out to the guests. <br /> It's pleasant to be invited for a dinner or supper and to come in time. Planning a visit take souvenirs or sweats for the children of the owner. Usually only men shake hands. Women and persons, sitting at a distance, are greeted by putting right hand to the heart and accompanying the gesture with a slight bow of the head.",
+        text_ru:"Основными чертами узбекских семей являются гостеприимство и традиционное уважение к старшим. Обычно узбеки живут большими семьями, состоящими из нескольких поколений, поэтому предпочтение отдается большим домам на земле. <br /> Чайная церемония, как элемент гостеприимства, играет важную роль в повседневной жизни. И исключительной прерогативой хозяина является приготовление чая и разливание его гостям. <br /> Приятно быть приглашенным на обед или ужин и прийти вовремя. Планируя визит, возьмите сувениры или сладости для детей хозяина. Обычно только мужчины пожимают руки. Женщин и людей, сидящих на расстоянии, приветствуют, прикладывая правую руку к сердцу и сопровождая жест легким поклоном головы.",
+        text_uz:"O'zbek oilalarining asosiy xususiyatlari mehmondo'stlik va kattalarga nisbatan an'anaviy hurmatdir. Odatda o'zbeklar bir necha avloddan iborat katta oilalar bilan yashaydilar, shuning uchun yerda katta uylar afzal ko'riladi. <br /> Mehmondo'stlik element sifatida choy marosimi kundalik hayotda muhim rol o'ynaydi. Choy tayyorlash va mehmonlarga quyish esa uy egasining istisno huquqidir. <br /> Kechki ovqat yoki kechki ovqatga taklif qilinish va o'z vaqtida kelish yoqimli. Tashrif rejalashtirganda uy egasining bolalari uchun esdalik yoki shirinliklar oling. Odatda faqat erkaklar qo'l silashadi. Ayollar va uzoqda o'tirgan odamlar o'ng qo'lni ko'krakka qo'yib va bosh bilan engil ta'zim qilish bilan salomlashadi.",
+        text_tr:"Özbek ailelerinin temel özellikleri misafirperverlik ve büyüklere geleneksel saygıdır. Genellikle Özbekler birkaç nesilden oluşan büyük aileler halinde yaşarlar, bu yüzden yerdeki büyük evler tercih edilir. <br /> Misafirperverliğin bir unsuru olarak çay töreni günlük yaşamda önemli bir rol oynar. Çay yapmak ve misafirlere dökmek ev sahibinin istisnai ayrıcalığıdır. <br /> Akşam yemeği veya akşam yemeğine davet edilmek ve zamanında gelmek hoştur. Ziyaret planlarken ev sahibinin çocukları için hediyelik eşya veya tatlılar alın. Genellikle sadece erkekler el sıkışır. Kadınlar ve uzakta oturan kişiler sağ eli kalbe koyarak ve hafif bir baş eğme hareketiyle selamlanır.",
+        image:AboutThreeImage
+    },
+    {
+        id:3,
+        title_en:"Uzbek ceramics",
+        title_ru:"Узбекская керамика",
+        title_uz:"O'zbek keramikasi",
+        title_tr:"Özbek seramiği",
+        text_en:"Ceramic for many centuries has been the most highly developed kind of trade in Central Asia. Slip and not slip ceramics of the leading centers had local features, appearing in peculiarity of forms, ornamental décor and colour. Traditional centers of ceramic, which remained till today, are: Rishtan, Gijduvan, Khiva, Samarkand, Gurumsaray, Shakhrisabz, Urgut, Khorezm and Tashkent. <br /> In recent years historically formed centers of ceramics have been revived, the assortment of ceramic products is enlarged (dishes, drinking bowls, cups, vessels for water and milk, different khums for keeping products), their quality becomes better. The masters, having felt the support from the government, enlarge volumes of production for reaching efficiency and competitiveness of their produce. They approach to keep local peculiarities, restore forgotten forms and images. At the same time in the décor of the ceramic handicrafts new ornamental and graphic motives appear. The masters of Samarkand school restore the traditions of vessel decoration by modeled elements in the form of animals and birds heads. In Rishtan the oldest masters and representatives of young generation have brilliant technical skills such as moulding (masters - kuzagars) and painting (masters - nakkoshi).",
+        text_ru:"Керамика на протяжении многих веков была наиболее развитым видом ремесла в Центральной Азии. Глазурованная и неглазурованная керамика ведущих центров имела местные особенности, проявляющиеся в своеобразии форм, орнаментального декора и цвета. Традиционные центры керамики, сохранившиеся до наших дней: Риштан, Гиждуван, Хива, Самарканд, Гурумсарай, Шахрисабз, Ургут, Хорезм и Ташкент. <br /> В последние годы исторически сложившиеся центры керамики были возрождены, ассортимент керамических изделий расширен (посуда, пиалы, чашки, сосуды для воды и молока, различные хумы для хранения продуктов), их качество улучшилось. Мастера, почувствовав поддержку со стороны правительства, увеличили объемы производства для достижения эффективности и конкурентоспособности своей продукции. Они стремятся сохранить местные особенности, восстановить забытые формы и образы. В то же время в декоре керамических изделий появляются новые орнаментальные и графические мотивы. Мастера самаркандской школы восстанавливают традиции украшения сосудов лепными элементами в виде голов животных и птиц. В Риштане старейшие мастера и представители молодого поколения обладают блестящими техническими навыками, такими как формовка (мастера - кузагары) и роспись (мастера - наккоши).",
+        text_uz:"Ko'p asrlar davomida keramika Markaziy Osiyoda eng rivojlangan hunarmandchilik turi bo'lgan. Yetakchi markazlarning sirlangan va sirlanmagan keramikasi mahalliy xususiyatlarga ega bo'lib, shakllarning o'ziga xosligi, bezak dekor va rangda namoyon bo'lgan. Bugungi kungacha saqlanib qolgan an'anaviy keramika markazlari: Rishton, G'ijduvon, Xiva, Samarqand, Gurumsaroy, Shahrisabz, Urgut, Xorazm va Toshkent. <br /> So'nggi yillarda tarixiy jihatdan shakllangan keramika markazlari qayta tiklandi, keramika mahsulotlari assortimenti kengaytirildi (idishlar, piyola, chashka, suv va sut uchun idishlar, mahsulotlarni saqlash uchun turli xumlar), ularning sifati yaxshilandi. Hukumatdan qo'llab-quvvatlashni his qilgan usta-masterlar o'z mahsulotlarining samaradorligi va raqobatbardoshligini oshirish uchun ishlab chiqarish hajmini kengaytirdilar. Ular mahalliy o'ziga xosliklarni saqlash, unutilgan shakl va tasvirlarni tiklashga intilishadi. Shu bilan birga, keramika qo'lda ishlangan buyumlar dekorida yangi bezak va grafik motivlar paydo bo'lmoqda. Samarqand maktabi ustalari hayvon va qush boshlari shaklidagi modellashtirilgan elementlar bilan idishlarni bezash an'analarini tiklashmoqda. Rishtonda eng qadimgi usta-masterlar va yosh avlod vakillari quyma (usta - kuzagarlar) va bo'yoq (usta - nakkoşi) kabi ajoyib texnik mahoratga ega.",
+        text_tr:"Keramik, yüzyıllar boyunca Orta Asya'da en gelişmiş zanaat türü olmuştur. Önde gelen merkezlerin sırlı ve sırsız seramikleri, formların özgünlüğü, süsleme dekoru ve renkte kendini gösteren yerel özelliklere sahipti. Günümüze kadar kalan geleneksel seramik merkezleri: Riştan, Gijduvan, Hive, Semerkant, Gurumsaray, Şahrisabz, Urgut, Harezm ve Taşkent'tir. <br /> Son yıllarda tarihsel olarak oluşan seramik merkezleri canlandırıldı, seramik ürünlerin çeşitliliği genişletildi (tabaklar, içki kaseleri, fincanlar, su ve süt için kaplar, ürünleri saklamak için çeşitli humlar), kaliteleri iyileşti. Hükümetten destek hisseden ustalar, ürünlerinin verimliliğini ve rekabet gücünü artırmak için üretim hacimlerini büyüttüler. Yerel özellikleri korumaya, unutulmuş form ve imgeleri restore etmeye çalışıyorlar. Aynı zamanda seramik el sanatlarının dekorunda yeni süsleme ve grafik motifler ortaya çıkıyor. Semerkant okulu ustaları, hayvan ve kuş başları şeklinde modellenmiş elementlerle kap süsleme geleneklerini restore ediyorlar. Riştan'da en eski ustalar ve genç nesil temsilcileri, kalıplama (usta - kuzagarlar) ve boyama (usta - nakkoşi) gibi parlak teknik becerilere sahipler.",
+        image:AboutFourImage
+    },
+    {
+        id:4,
+        title_en:"Bukhara embroidery",
+        title_ru:"Бухарская вышивка",
+        title_uz:"Buxoro tikish",
+        title_tr:"Buhara işleme",
+        text_en:"Bukhara seamstresses depending on technical devices divide golden sewing into several types. The main types are: \"zarduzi-zaminduzi\" – solid embroidery of golden background and \"zarduzi - gulduzi\" – pattern (flower) sewing. Besides, \"zarduzi – gulduz - zaminduzi\" – combined technique of sewing, \"zarduzi - berishimduzi\" – sewing, where silk motives alternate with golden patterns, and \"zardusi - pulyakchaduzi\", in which golden sewing harmonize with the sewed spangles, are used.",
+        text_ru:"Бухарские швеи в зависимости от технических устройств делят золотое шитье на несколько типов. Основные типы: \"зардузи-заминдузи\" – сплошная вышивка золотым фоном и \"зардузи - гульдузи\" – вышивка узором (цветком). Кроме того, используются \"зардузи – гульдуз - заминдузи\" – комбинированная техника шитья, \"зардузи - беришимдузи\" – шитье, где шелковые мотивы чередуются с золотыми узорами, и \"зардуси - пулякчадузи\", в котором золотое шитье гармонирует с пришитыми блестками.",
+        text_uz:"Buxoro tikuvchilari texnik qurilmalarga qarab oltin tikishni bir necha turlarga bo'ladilar. Asosiy turlar: \"zarduzi-zaminduzi\" – oltin fon bilan qattiq tikish va \"zarduzi - gulduzi\" – naqsh (gul) tikish. Bundan tashqari, \"zarduzi – gulduz - zaminduzi\" – tikishning birlashgan texnikasi, \"zarduzi - berishimduzi\" – ipak motivlari oltin naqshlar bilan almashinadigan tikish va \"zardusi - pulyakchaduzi\" ishlatiladi, bunda oltin tikish tikilgan yaltiroqlar bilan uyg'unlashadi.",
+        text_tr:"Buhara terzileri teknik cihazlara bağlı olarak altın işlemeyi birkaç türe ayırırlar. Ana türler: \"zarduzi-zaminduzi\" – altın arka plan ile katı işleme ve \"zarduzi - gulduzi\" – desen (çiçek) işleme. Ayrıca, \"zarduzi – gulduz - zaminduzi\" – birleşik işleme tekniği, \"zarduzi - berishimduzi\" – ipek motiflerin altın desenlerle değiştiği işleme ve \"zardusi - pulyakchaduzi\" kullanılır, burada altın işleme dikilen pullarla uyum sağlar.",
+        image:AboutFiveImage
+    },
+]

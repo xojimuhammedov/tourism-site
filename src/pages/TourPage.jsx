@@ -61,7 +61,7 @@ const TourPage = () => {
                                             data?.map((item, index) => (
                                                 <Box key={index} {...css.item}>
                                                     <Image
-                                                        src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
+                                                        src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[0]?.image_src}`}
                                                         {...css.image}
                                                     />
                                                     <Heading className='tour-name' {...css.subnames}>{item[`name_${i18n?.language}`]}</Heading>
@@ -88,7 +88,7 @@ const TourPage = () => {
                                             subtour?.map((item, index) => (
                                                 <Box key={index} {...css.item}>
                                                     <Image
-                                                        src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
+                                                        src={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[0]?.image_src}`}
                                                         {...css.image}
                                                     />
                                                     <Heading className='tour-name' {...css.subnames}>{item[`name_${i18n?.language}`]}</Heading>

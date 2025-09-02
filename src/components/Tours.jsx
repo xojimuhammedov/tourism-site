@@ -104,7 +104,7 @@ function Tours() {
                               data?.map((item) => (
                                 <SwiperSlide key={item?.id}>
                                     <Box 
-                                        backgroundImage={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
+                                        backgroundImage={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[0]?.image_src}`}
                                         {...css.item}>
                                         <Heading className="tour-name" {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
                                         <Link
@@ -124,7 +124,7 @@ function Tours() {
                               tour?.map((item) => (
                                 <SwiperSlide key={item?.id}>
                                     <Box 
-                                        backgroundImage={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[1]?.image_src}`}
+                                        backgroundImage={`${BASE_URL}/uploads/images/${item?.sub_tour_images?.[0]?.image_src}`}
                                         {...css.item}>
                                         <Heading className="tour-name" {...css.subname}>{item[`name_${i18n?.language}`]}</Heading>
                                         <Link

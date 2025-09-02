@@ -38,6 +38,7 @@ const Nav = () => {
             <Box className='container'>
                 <Flex justifyContent={'flex-end'} gap={'12px'} align={'center'}>
                     <Link {...css.link} target='_blank' href='+998947113377'>+998 94 711 33 77</Link>
+                    <Link {...css.link} target='_blank' href='+998942113377'>+998 94 211 33 77</Link>
                     <Link {...css.link} target='_blank' href={"mailto:info@csrtravel.uz"}>info@csrtravel.uz</Link>
                     <Flex align={'center'} gap={"12px"}>
                         <Link target="_blank" href="https://www.instagram.com/century_silk_road_travel/">

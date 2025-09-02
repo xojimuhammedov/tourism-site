@@ -74,7 +74,7 @@ const css = {
         color:"white",
         fontSize:{
             base:"50px",
-            lg:"85px"
+            lg:"80px"
         },
         lineHeight:{
             base:"45px",
@@ -85,7 +85,8 @@ const css = {
             base:"90%",
             lg:"600px"
         },
-        letterSpacing:"2px"
+        letterSpacing:"2px",
+        textTransform:"uppercase"
     },
     link:{
         backgroundColor: "#f0cc89",

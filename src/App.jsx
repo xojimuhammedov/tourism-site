@@ -20,6 +20,8 @@ import DestinationAboutPage from './pages/DestinationAboutPage'
 import Nav from './components/Nav'
 import HomeDestionation from './components/Destionation'
 import Whatsapp from './assets/Whatsapp';
+import AboutPage from './pages/AboutPage'
+import AboutInformationPage from './pages/AboutInformationPage'
 
 function App() {
 
@@ -46,6 +48,8 @@ function App() {
           <Route path='/transport' element={<TransportPage />} />
           <Route path='/destination' element={<DestinationPage />} />
           <Route path='/destination/about/:id' element={<DestinationAboutPage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='/about/:id' element={<AboutInformationPage />} />
         </Routes>
       </Box>
       <Footer />
